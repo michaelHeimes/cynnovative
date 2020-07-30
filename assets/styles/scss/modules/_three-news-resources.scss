@@ -1,0 +1,24 @@
+.three-news-resources {
+	position: relative;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		max-width: $global-width;
+		border-top: 1px solid $medium-gray;
+	}
+	
+	h2.h1 {
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	
+	.view-all-wrap {
+		padding-top: 1.9em;
+	}
+		
+}

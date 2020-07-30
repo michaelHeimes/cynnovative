@@ -1,0 +1,164 @@
+header.header {
+	position: relative;
+	transition: transform .5s ease;
+	
+	#top-bar-menu,
+	#top-bar-menu ul {
+		z-index: 1;
+		top: 0;
+		width: 100%;
+		background: $white;
+	}
+		
+	#top-bar-menu {
+		
+		.grid-x {
+			min-height: 60px;
+			align-items: center;
+			justify-content: space-between;
+			@include breakpoint(xmedium) {
+				align-items: flex-end;
+				min-height: 121px;
+			}
+			
+			ul#main-nav {
+				display: flex;
+				justify-content: flex-end;
+				
+				ul.submenu {
+					padding-top: 0.85em;
+					padding-bottom: 0.85em;
+					top: 40px;
+					
+					li.current-menu-item a:before {
+						left: .85rem;
+						right: auto;
+					}
+					
+				}
+				
+			}
+		
+			ul {
+				
+				li {
+					position: relative;
+				&.logo {
+					img {
+						width: 100%;
+						max-width: 115px;
+							
+						@include breakpoint(xmedium) {
+							max-width: 190px;
+						}
+						
+					}
+				}
+				
+				a {
+					font-family: $font-sans;
+					font-size: rem-calc(16);
+					color: $black;
+					letter-spacing: 0;
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+				
+				&.current-menu-item > a:before {
+					content: '';
+					position: absolute;
+					width: 58px;
+					height: 6px;
+					background-color: $red;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+				}
+				
+				&.menu-item-has-children.current-menu-item a:before {
+					right: 0.75rem;
+				}
+					
+				}
+				
+			}	
+			
+			.top-bar-right {
+				
+				a.mobile-toggle {
+					position: relative;
+					width: 30px;
+					height: 29px;
+					padding: 0;
+					
+					span {
+						position: absolute;
+						display: inline-block;
+						width: 100%;
+						height: 3px;
+						background-color: $black;
+						border-radius: 3px;
+						
+					&:nth-child(1) {
+						top: 5px;
+					}
+
+					&:nth-child(2) {
+						top: 13px;
+					}
+					
+					&:nth-child(3) {
+						top: 21px;
+					}
+											
+					}
+					
+				&[aria-expanded="true"] {
+					
+				}
+					
+				}
+				
+				@include breakpoint(xmedium) {
+					padding-bottom: 1.35em;
+				}
+			}
+			
+		}
+		
+	}
+		
+}
+
+div#off-canvas {
+	padding-top: 1em;
+	
+	ul {
+		li {
+			position: relative;
+			
+		&.current-menu-item > a:before {
+			content: '';
+			position: absolute;
+			width: 58px;
+			height: 6px;
+			background-color: $red;
+			bottom: 0;
+			left: .85rem;
+			right: 0;
+		}
+			
+			a {
+				margin-top: 0.8em;				
+				font-family: $font-sans;
+				font-size: rem-calc(16);
+				color: $black;
+				letter-spacing: 0;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+		}
+	}
+	
+}

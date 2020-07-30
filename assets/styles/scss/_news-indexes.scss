@@ -1,0 +1,48 @@
+article.post-card {
+	margin-bottom: 1.875rem;
+	display: flex;
+	
+	.inner {
+		width: 100%;
+		background-color: $light-gray;
+		padding-bottom: 1.2em;
+		display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
+	
+		.cat-tab {
+			font-family: $font-sans;
+			font-size: rem-calc(14);
+			color: $white;
+			letter-spacing: 0.25px;
+			text-transform: uppercase;
+			padding: 1.7em 30px 0.9em;
+		}
+		
+		h2 {
+			padding: 0.4em 30px 0.9em;
+		}
+
+		.bottom {		
+			padding: 0 30px;
+		}
+	
+	}
+	
+}
+
+.single-news_resources {
+	article.module {
+		padding-bottom: 0;
+		
+		.article-header {
+			padding-bottom: 1.4em;
+		}
+		
+	}
+	
+	.btn-wrap {
+		padding-bottom: 6.4em;
+	}
+	
+}
