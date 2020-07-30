@@ -9,7 +9,15 @@
 <div class="top-bar" id="top-bar-menu">
 	<div class="top-bar-left float-left">
 		<ul class="menu">
-			<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
+			
+			<?php 
+			$image = get_field('header_logo', 'option');
+			if( !empty( $image ) ): ?>
+			    <li><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></a></li>
+			    <?php else:?>
+			    <li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
+			<?php endif; ?>
+			
 		</ul>
 	</div>
 	<div class="top-bar-right show-for-medium">

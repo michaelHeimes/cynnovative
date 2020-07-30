@@ -9,19 +9,21 @@ get_header(); ?>
 	
 	<div class="content">
 	
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+		<div class="inner-content grid-x grid-padding-x">
 	
-		    <main class="main small-12 large-8 medium-8 cell" role="main">
+		    <main class="main cell small-12" role="main">
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 			    	<?php get_template_part( 'parts/loop', 'page' ); ?>
 			    
-			    <?php endwhile; endif; ?>							
+			    <?php endwhile; endif; ?>	
+			    
+			    
+			    <?php get_template_part('page-modules');?>
+						
 			    					
 			</main> <!-- end #main -->
-
-		    <?php get_sidebar(); ?>
 		    
 		</div> <!-- end #inner-content -->
 
