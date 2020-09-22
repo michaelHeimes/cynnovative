@@ -1,0 +1,280 @@
+.page-template-page-careers {
+		
+	section.pi-copy {
+	    padding-top: 5em;	    
+	}
+	
+	section.contractor-slider-wrap {
+    	padding-top: 7em;
+    	
+    	@include breakpoint(medium) {
+	    	padding-top: 10em;
+    	}
+    	
+	    h2 {
+		    margin-bottom: 1em;
+		    
+		    @include breakpoint(medium) {
+		    	margin-bottom: 2.42em;
+		    }
+		    
+	    }
+    	
+	}
+	
+	section.contractor-slider-wrap {
+		.contractor-slidernav {
+			
+			.nav {
+			
+				.nav-link-wrap {
+					
+					a {
+						display: block;
+						font-family: $header-font-family;
+						color: $black;
+						text-transform: uppercase;
+						font-size: rem-calc(13);
+						line-height: 1.1666;	
+						
+						@include breakpoint(medium) {
+							font-size: rem-calc(30);
+						}
+						
+						@include breakpoint(tablet) {
+							font-size: rem-calc(22);
+						}
+						
+						@include breakpoint(large) {
+							font-size: rem-calc(24);
+						}
+
+						@include breakpoint(xlarge) {
+							font-size: rem-calc(30);
+						}
+									
+					}
+					
+					.bar {
+						width: 130px;
+						height: 5px;
+						margin: .25em auto 1.1em;
+						opacity: 0;
+						
+						@include breakpoint(medium) {
+							height: 14px;
+							width: 199px;
+							margin: 1.25em auto 3.1em;
+						}
+						
+					}	
+					
+				&.clicked {
+					.bar {
+						opacity: 1;
+					}
+				}
+					
+				}
+				
+			&.slide-1-current {
+				.nav-link-wrap:nth-child(1) {
+					.bar {
+						opacity: 1;
+					}
+				}
+			}
+
+			&.slide-2-current {
+				.nav-link-wrap:nth-child(2) {
+					.bar {
+						opacity: 1;
+					}
+				}
+			}
+			
+			&.slide-3-current {
+				.nav-link-wrap:nth-child(3) {
+					.bar {
+						opacity: 1;
+					}
+				}
+			}
+			
+			&.slide-4-current {
+				.nav-link-wrap:nth-child(4) {
+					.bar {
+						opacity: 1;
+					}
+				}
+			}
+				
+			}
+		
+		}
+	}
+	
+	.contractor-slider {
+		
+		.single-slide {
+			padding-left: 2em;
+			padding-right: 2em;
+			
+			h2 {
+				@media screen and (max-width: 400px) {
+					font-size: rem-calc(20);
+				}
+			}
+			
+		}
+		
+		.slick-arrow {
+			position: absolute;
+			z-index: 1;
+			top: 45%;
+			transform: translateY(-50%);
+			
+			@include breakpoint(medium) {
+				top: 50%;
+			}
+			
+			&.slick-prev {
+				left: 0.7em;
+				
+				@include breakpoint(xxlarge) {
+					left: -0.935rem;
+				}
+			}
+
+			&.slick-next {
+				right: 0.7em;
+				
+				@include breakpoint(xxlarge) {
+					right: -0.935rem;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	section.bbg-cta {
+		padding-top: 7.1em;
+		padding-bottom: 3em;
+		background-color: $black;
+		color: $white;	
+		
+		@include breakpoint(medium) {
+			adding-top: 13.1em;
+		}
+		
+		h2,
+		a {
+			color: $white;
+		}
+		
+		h2 {
+			margin-bottom: 1em;
+		}	
+	}
+	
+	section.quotes {
+		padding-top: 6.35em;
+		padding-bottom: 5.55em;
+		
+		@include breakpoint(medium) {
+			padding-top: 9.35em;
+			padding-bottom: 8.55em;			
+		}
+		
+		h2 {
+			margin-bottom: 1.62em;
+		}
+		
+		p {
+			max-width: 1200px;
+			margin: auto;
+		}
+		
+		.single-quote {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+		
+	}
+	
+	section.team {
+		max-width: 1680px;
+		margin: auto;
+		padding-top: 7.35em;
+		
+		@include breakpoint(medium) {
+			padding-top: 11.35em;
+		}
+		
+		h2 {
+			margin: 0;
+			padding-bottom: 1.98em;
+			
+			@media screen and (max-width: 400px) {
+				font-size: rem-calc(20);
+			}
+			
+		}
+		
+		.img-tiles {
+			display: flex;
+			flex-wrap: wrap;
+    
+			.img-tile {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+				
+			&.it-1,
+			&it-2,
+			&.it-3 {
+				height: 54.762vw;
+				
+				@include breakpoint(max) {
+					height: 902px;
+				}
+				
+			}
+			
+			&.it-4,
+			&it-5 {
+				height: 38.334vw;
+				
+				@include breakpoint(max) {
+					height: 644px;
+				}
+				
+			}
+				
+			&.it-1 {
+				width: 31%;
+			}
+
+			&.it-2 {
+				width: 69%;
+			}
+			
+			&.it-3 {
+				width: 100%;
+			}
+			
+			&.it-4 {
+				width: 70%;
+			}
+			
+			&.it-5 {
+				width: 30%;
+			}
+				
+			}
+		}
+	}
+	
+}

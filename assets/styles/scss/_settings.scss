@@ -66,10 +66,10 @@
 // ---------
 
 $global-font-size: 100%;
-$global-width: rem-calc(1100);
+$global-width: rem-calc(1370);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #ed2524,
+  primary: #12b2cc,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
@@ -82,7 +82,7 @@ $black: #231f20;
 $white: #ffffff;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: Montserrat, Helvetica, Arial, sans-serif;
+$body-font-family: Barlow, Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -90,7 +90,8 @@ $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
-$global-menu-padding: .7rem 0.85rem;
+// $global-menu-padding: .7rem 0.85rem;
+$global-menu-padding: 0;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
@@ -108,13 +109,14 @@ $print-hrefs: true;
 $breakpoints: (
   small: 0,
   medium: 640px,
-  xmedium: 992px,
+  tablet: 992px,
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
+  max: 1680px,
 );
 $print-breakpoint: large;
-$breakpoint-classes: (small medium xmedium large);
+$breakpoint-classes: (small medium tablet large xlarge xxlarge max);
 
 // 3. The Grid
 // -----------
@@ -132,7 +134,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: abril-display, Georgia, serif;
+$header-font-family: EurostileExt-Bla, Georgia, serif;
 $header-font-weight: 600;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -144,15 +146,31 @@ $header-styles: (
     'h1': ('font-size': 36),
     'h2': ('font-size': 26),
     'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
+    'h4': ('font-size': 23),
     'h5': ('font-size': 17),
     'h6': ('font-size': 16),
   ),
   medium: (
     'h1': ('font-size': 48),
+    'h2': ('font-size': 26),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 30),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
+  ),
+  tablet: (
+    'h1': ('font-size': 48),
     'h2': ('font-size': 36),
     'h3': ('font-size': 31),
-    'h4': ('font-size': 22),
+    'h4': ('font-size': 30),
+    'h5': ('font-size': 20),
+    'h6': ('font-size': 16),
+  ),
+  large: (
+    'h1': ('font-size': 48),
+    'h2': ('font-size': 36),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 34),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
@@ -160,7 +178,7 @@ $header-styles: (
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.77777;
+$paragraph-lineheight: 1.7;
 $paragraph-margin-bottom: 1.75rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
@@ -229,11 +247,11 @@ $accordion-plusminus: true;
 $accordion-title-font-size: rem-calc(18);
 $accordion-item-color: $black;
 $accordion-item-background-hover: transparent;
-$accordion-item-padding: 1.25rem 1rem;
+$accordion-item-padding: 4.75rem 1rem 2.25em;
 $accordion-content-background: $white;
 $accordion-content-border: 0px solid $light-gray;
 $accordion-content-color: $body-font-color;
-$accordion-content-padding: 1rem;
+$accordion-content-padding: 4.85em 1rem;
 
 // 8. Accordion Menu
 // -----------------
@@ -280,20 +298,20 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: inherit;
-$button-padding: .695em 2.505em;
+$button-font-family: Montserrat, Helvetica, Arial, sans-serif;
+$button-padding: .7em 2.5em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $black;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: $white;
 $button-color-alt: $black;
-$button-radius: 18px;
+$button-radius: 0;
 $button-hollow-border-width: 0px;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
-  default: 0.9rem,
+  default: 1.5625rem,
   large: 1.25rem,
 );
 $button-palette: $foundation-palette;
@@ -475,7 +493,7 @@ $menu-margin: 0;
 $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
-$menu-item-color-active: $white;
+$menu-item-color-active: $black;
 $menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 $menu-state-back-compat: true;
@@ -846,8 +864,8 @@ $tooltip-radius: $global-radius;
 // 55. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-padding: 0;
+$topbar-background: $white;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;

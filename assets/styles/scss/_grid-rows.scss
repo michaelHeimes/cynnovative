@@ -1,0 +1,123 @@
+.grid-rows {
+	.single-row {
+		overflow: hidden;
+		
+		@include breakpoint(medium) {
+			height: 100%;
+			max-height: 1100px;	
+			
+			.grid-container,
+			.grid-x,
+			.cell {
+				height: 100%;
+			}
+		
+		&:not(.single-slide):nth-child(even) {
+			
+			> .grid-container > .grid-x {	
+				flex-direction: row-reverse;
+				
+				.text-wrap {
+					padding-right: 2.2em;
+					
+					@include breakpoint(tablet) {
+						padding-right: 4.2em;
+					}
+					
+				}
+				
+			}
+			
+		}
+			
+		}
+		
+		@include breakpoint(large) {
+// 			height: 100vh;
+		}
+		
+		
+		.cell.nfh {
+			height: auto;
+		}
+		
+		.img-wrap {
+			background-size: cover;
+			height: 133vw;
+			
+			@include breakpoint(medium) {
+				height: auto;
+				min-height: 0;
+				margin-bottom: 0;
+			}
+			
+		}
+		
+		.text-wrap {
+			max-width: 685px;
+			padding-left: .9375rem;
+			padding-top: 4em;
+			padding-bottom: 5.2em;
+			
+			@include breakpoint(medium) {
+				padding-left: 2.2em;
+				padding-top: 5.5em;
+				padding-bottom: 7.5em;
+			}
+				
+			@include breakpoint(tablet) {
+				padding-left: 4.2em;
+				padding-top: 7.5em;
+				padding-bottom: 10.5em;
+			}
+			
+			@include breakpoint(large) {
+				padding-top: 14.3em;
+				padding-bottom: 19.02em;
+			}
+			
+			h2 {
+				text-transform: uppercase;
+				margin-bottom: 0.72em;
+			}
+			
+			.grid-x {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				align-content: center;
+			}
+		}
+	
+	&.case-study {
+		background: $black;
+		color: $white;
+		
+		.cs-label-wrap {
+			padding-bottom: 1em;
+			
+			h3 {
+				text-transform: uppercase;
+				font-size: rem-calc(16);
+				margin: 0;
+				line-height: 1;
+			}
+			
+			.bar.gradient-bg {
+				width: 143px;
+				height: 4px;
+			}
+			
+		}
+		
+		h2,
+		h3,
+		p,
+		a {
+			color: $white;
+		}
+		
+	}
+		
+	}
+}

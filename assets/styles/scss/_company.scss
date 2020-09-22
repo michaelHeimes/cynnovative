@@ -1,0 +1,17 @@
+.page-template-page-company {
+	
+	section.pi-copy {
+    	padding-top: 5.8em;
+    	padding-bottom: 6.2em;
+	}
+	
+	section.grid-rows {
+    	padding-bottom: 30;
+    	
+    	@include breakpoint(medium) {
+	    	padding-bottom: 5.55em;
+	    }
+	    
+	}
+	
+}

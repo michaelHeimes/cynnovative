@@ -1,0 +1,41 @@
+.single-post {
+		
+	section.entry-content {
+		padding-top: 2.8em;
+		
+		@include breakpoint(medium) {
+	    	padding-top: 5.8em;
+	    }
+	}
+	
+}
+
+.blog,
+.archive {
+	
+	main {
+// 		padding-top: 5.8em;
+	
+	article.post {
+		padding-bottom: 3em;
+		
+		img {
+			margin-bottom: 1.75em;
+			
+			@include breakpoint(tablet) {
+				margin-bottom: 0;
+			}
+			
+		}
+	
+		h2 {
+			a {
+				color: $black;
+			}
+		}
+	
+	}
+	
+	}
+	
+}

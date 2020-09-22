@@ -1,0 +1,18 @@
+.page-template-page-contact {
+	
+	h1.title {
+		color: $white;
+	}
+	
+	.pi-copy {
+		padding-top: 3.7em;
+		
+		p {
+			font-size: rem-calc(60);
+			font-family: $header-font-family;
+			text-transform: uppercase;
+			line-height: 1.333;
+		}
+	}
+	
+}

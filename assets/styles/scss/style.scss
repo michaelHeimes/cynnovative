@@ -64,6 +64,9 @@ CSS file.
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
+// Fonts
+@import "fonts";
+
 // Vendor Styles
 @import "vendor/slick"; 
 
@@ -72,16 +75,13 @@ CSS file.
 @import "global";
 @import "header";
 @import "footer";
+@import "grid-rows";
 @import "home";
-@import "news-indexes";
- 
+@import "capabilities";
+@import "careers";
+@import "company";
+@import "blog";
+@import "job-openings"; 
+@import "contact"; 
+
 // Module Styles
-@import "modules/hero-slider";
-@import "modules/back-page-title-banner";
-@import "modules/heading-and-copy";
-@import "modules/centered-heading-and-copy";
-@import "modules/services";
-@import "modules/quote";
-@import "modules/padded-box";
-@import "modules/three-news-resources";
-@import "modules/careers-accordion";

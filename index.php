@@ -11,9 +11,17 @@ get_header(); ?>
 			
 	<div class="content">
 	
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
+		<div class="inner-content grid-padding-x">
+						
+			<section class="title-banner text-center">
+				<div class="grid-container fluid">
+					<div class="grid-x grid-padding-x">
+						<h1 class="title cell small-12 text-center">Blog</h1>
+					</div>
+				</div>
+			</section>
 	
-		    <main class="main small-12 medium-8 large-8 cell" role="main">
+		    <main class="main small-12 cell" role="main">
 		    
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
@@ -32,8 +40,6 @@ get_header(); ?>
 																								
 		    </main> <!-- end #main -->
 		    
-		    <?php get_sidebar(); ?>
-
 		</div> <!-- end #inner-content -->
 
 	</div> <!-- end #content -->

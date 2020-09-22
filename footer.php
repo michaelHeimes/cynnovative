@@ -9,21 +9,69 @@
  ?>
 					
 				<footer class="footer" role="contentinfo">
-					
-					<div class="inner-footer grid-x grid-margin-x grid-padding-x">
-						
-						<div class="small-12 medium-12 large-12 cell">
-							<nav role="navigation">
-	    						<?php joints_footer_links(); ?>
-	    					</nav>
-	    				</div>
-						
-						<div class="small-12 medium-12 large-12 cell">
-							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+					<div class="grid-container">
+						<div class="pre-footer grid-x grid-padding-x">
+							
+							<?php if ($footer_heading = get_field('footer_heading', 'option')):?>
+							<div class="cell small-12 text-center">
+								<div class="bar gradient-bg"></div>
+								<h2><?php echo $footer_heading;?></h2>
+							</div>
+							<?php endif;?>
+							
 						</div>
-					
+					</div>
+											
+					<div class="inner-footer">
+						<div class="grid-container">
+							<div class="grid-x grid-padding-x">
+								
+								<ul class="footer-logo menu cell small-12">
+								<?php 
+								$image = get_field('footer_logo', 'option');
+								if( !empty( $image ) ): ?>
+								    <li><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></a></li>
+								    <?php else:?>
+								    <li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
+								<?php endif; ?>
+								</ul>
+						
+								<div class="cell small-12">
+									
+									<ul class="menu social-links text-right">
+										<?php if($twitter = get_field('twitter_link', 'option')):?>
+										<li><a href="<?php echo $twitter;?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
+										<?php endif;?>
+										<?php if($linkedin = get_field('linkedin_link', 'option')):?>
+										<li><a href="<?php echo $linkedin;?>" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+										<?php endif;?>
+									</ul>
+									
+									<nav role="navigation">
+			    						<?php joints_footer_links(); ?>
+			    					</nav>
+			    					
+			    					<div class="address text-right">
+				    					<?php the_field('footer_address', 'option');?>
+			    					</div>
+			    					
+			    				</div>
+						
+							</div>
+						</div>
 					</div> <!-- end #inner-footer -->
+						
+					<div class="post-footer gradient-bg">
+						<div class="grid-container">
+							<div class="grid-x grid-padding-x">							
+								<div class="cell small-12 text-center">
+									&copy; <?php echo date('Y'); ?> Made With <i class="fas fa-heart"></i> By Pomerantz Marketing
+								</div>
+							</div>
+						</div>
+					</div>
 				
+					</div>
 				</footer> <!-- end .footer -->
 			
 			</div>  <!-- end .off-canvas-content -->

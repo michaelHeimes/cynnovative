@@ -3,204 +3,187 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
-@font-face {
-  font-family: 'effra';
-    src: url('/wp-content/themes/Intyllus/assets/fonts/Effra-Regular.eot');
-    src: url('/wp-content/themes/Intyllus/assets/fonts/Effra-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/wp-content/themes/Intyllus/assets/fonts/Effra-Regular.woff2') format('woff2'),
-        url('/wp-content/themes/Intyllus/assets/fonts/Effra-Regular.woff') format('woff'),
-        url('/wp-content/themes/Intyllus/assets/fonts/Effra_Std_Rg.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'kristopher';
-	src: url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.eot');
-	src: url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.eot?#iefix') format('embedded-opentype'),
-	    url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.woff2') format('woff2'),
-	    url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.woff') format('woff'),
-	    url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.otf') format('opentype'),
-        url('/wp-content/themes/Intyllus/assets/fonts/Kristopher-Regular.ttf') format('truetype');
-}
+
 
 /*********************
 GLOBAL STYLES
 *********************/
-.content-wrap {
-	max-width: 836px;
+.grid-container.fluid {
+	max-width: 1680px;
+	margin: auto;
 }
 
-.lt-gray-bg {
-	background-color: $light-gray;
-}
-
-.heading-underline {
-	width: 57px;
-	height: 4px;
-	background: $red;
-	margin: .7em auto 2.2em;
+.big-copy,
+.big-copy p {
+	font-size: rem-calc(24);
+	line-height: 1.35;
+	font-weight: 500;
 	
-	@include breakpoint (medium) {
-		height: 6px;
+	@include breakpoint (tablet) {
+		font-size: rem-calc(34);
 	}
 	
 }
 
 h1,
 h2,
-h3 {
-	text-transform: none;
-	line-height: 1.217;
+h3,
+h4,
+h5 {
+	text-transform: uppercase;
 }
 
-h1.h1,
-h2.h1 {
-	font-size: rem-calc(36);
-	color: $header-blue;
-	
-	@include breakpoint(medium) {
-		font-size: rem-calc(46);
+section.title-banner{
+	.grid-x {
+		min-height: 250px;
+		align-items: center;
+		
+		@include breakpoint (medium) {
+			min-height: 639px;
+		}
+		
+		h1.title {
+			font-size: 9.68vw;
+			line-height: 1.0778;
+/*
+			padding-top: 1.434em;
+			padding-bottom: 0.95em;
+*/
+			
+			@include breakpoint (max) {
+				font-size: 163px;
+			}
+		}
 	}
-	
 }
 
-h3 {
-	font-size: rem-calc(23);
+h2.big-h2 {	
+    font-size: rem-calc(28);
+    
+    @include breakpoint (medium) {
+	    font-size: rem-calc(40);
+    }
+    
+    @include breakpoint (large) {
+	    font-size: rem-calc(46);
+    }
+
+    @include breakpoint (xlarge) {
+	    font-size: rem-calc(53);
+    }
+    
 }
 
 p,
 ul,
-ol {
-	font-size: rem-calc(18);
-	color: $black;
-	line-height: 1.77777;
+li {
+	font-size: rem-calc(20);
 }
 
-ul:not(.menu):not(.slick-dots) {
-	list-style: none;
-	padding: 0.55em 0 0;
+section.cc-copy {
+	background-color: $black;
+	padding-top: 5em;
+    padding-bottom: 3.5em;
+	min-height: 460px;
+	display: flex;
+    align-items: center;
 	
-	li {
-		position: relative;
-		padding: 0.3em 0 0.3em 1em;
+	.grid-x {	
+		p {
+			text-transform: uppercase;
+			color: $white;
+			font-size: rem-calc(26);
+			line-height: 1.428;
+			
+			@include breakpoint (medium) {
+				font-size: rem-calc(35);
+			}
+			
+		}
+	}
+}
+
+.learn-more {
+	color: $black;
+	font-family: $header-font-family;
+	text-transform: uppercase;
+	font-size: rem-calc(20);
+	
+	@include breakpoint (medium) {
+		font-size: rem-calc(22);
+	}
+	
+	@include breakpoint (tablet) {
+		font-size: rem-calc(25);
+	}
+	
+	img {
+	    margin-top: -.15em;
+		margin-right: 0.5em;
+	}
+	
+}
+
+.gradient-bg {
+	color: $white;
+	background-image: linear-gradient( -57deg, rgb(113,196,140) 0%, rgb(85,191,161) 22%, rgb(57,185,181) 51%, rgb(36,182,193) 78%, rgb(15,178,205) 100%);	
+	
+	h2 {
+		color: $white;
+	}
+	
+}
+
+.button {
+	min-width: 362px;
+	font-weight: bold;
+}
+
+/*********************
+GRADIENT CTA
+*********************/
+.gcta-heading {
+	
+	h2 {
+		text-transform: uppercase;
+		font-size: 8.5vw;
+		line-height: 1;
+		padding-top: 3.18em;
 		
-		&:before {
-			content: '';
-			position: absolute;
-			left: -0.4em;
-		    top: 0.8em;
-		    width: 4px;
-		    height: 4px;
-		    border-radius: 100%;
-			background-color: $black;
+		@include breakpoint (medium) {
+			font-size: rem-calc(60);
+		}
+		
+	}
+	
+	p {
+		font-size: rem-calc(20);
+		line-height: 1.66666;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin: 0;
+		padding-bottom: 2.1em;
+		
+		@include breakpoint (medium) {
+			font-size: rem-calc(30);
+		}
+		
+	}
+	
+	.button {
+		min-width: 0;
+		background-color: $white;
+		color: $black;
+		margin-bottom: 5.68em;
+		
+		@include breakpoint (medium) {
+			min-width: 362px;
 		}
 		
 	}
 	
 }
 
-.sticky-container {
-	z-index: 1;
-}
-
-/*********************
-MODULES
-*********************/
-.module {
-    padding-top: 6.05em;
-    padding-bottom: 6.05em;
-    
-&.no-tp {
-	padding-top: 0;
-}
-
-&.no-bp {
-	padding-bottom: 0;
-}
-    
-&.background-white {
-	background-color: $white;
-}
-
-&.background-gray {
-	background-color: $light-gray;
-}
- 
-&:last-child {
-	padding-bottom: 9em;
-}
-    
-&.no-bp:last-child {
-	padding-bottom: 6.05em;
-}
-
-}
-
-.inner {
-	
-&.background-white {
-	background-color: $white;
-}
-
-&.background-gray {
-	background-color: $light-gray;
-}
-
-}
-
-
-/*********************
-BUTTONS AND LINKS
-*********************/
-.alm-btn-wrap .alm-load-more-btn,
-.button {
-	font-family: $font-sans;
-	font-weight: bold;
-	font-size: rem-calc(16);
-	text-align: center;
-	
-&.white {
-	background-color: $white;
-	color: $black;
-}
-	
-}
-
-a.chev-link {
-	font-family: Helvetica;
-	font-size: rem-calc(16);
-	font-weight: bold;
-	text-transform: uppercase;
-	color: $navy;
-	display: inline-flex;
-	align-items: center;
-	
-	img {
-		margin-left: 6px;
-	}
-	
-}
-
-.alm-btn-wrap {
-	text-align: center;
-	padding-top: 2em;
-
-	.alm-load-more-btn {
-		background-color: $black;
-		color: $white;
-		display: inline-block;
-	    vertical-align: middle;
-	    margin: 0 0 1rem;
-	    padding: .695em 2.505em;
-	    border: 1px solid transparent;
-	    border-radius: 18px;
-	    transition: background-color .25s ease-out,color .25s ease-out;
-	    font-size: .9rem;
-	    -webkit-appearance: none;
-	    line-height: 1;
-	    text-align: center;
-	    cursor: pointer;
-	}
-	
-}
 
 /*********************
 PAGES
@@ -291,6 +274,20 @@ POSTS & CONTENT STYLES
 // Add Foundation styling to password protect button
 .post-password-form input[type="submit"] {
 	@include button;
+}
+
+.page-navigation {
+	ul.pagination {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		
+		li {
+			font-family: $header-font-family;
+			margin: 0 0.5em;
+		}
+		
+	}
 }
 
 /*********************

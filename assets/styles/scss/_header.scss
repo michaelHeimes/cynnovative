@@ -1,3 +1,16 @@
+ul#offcanvas-nav {
+	padding: 1em 0.6em;
+	
+	li {
+		margin-bottom: 1em;
+		a {
+			padding: 0.2em;
+			color: $black;
+		}
+	}
+	
+}
+
 header.header {
 	position: relative;
 	transition: transform .5s ease;
@@ -8,157 +21,121 @@ header.header {
 		top: 0;
 		width: 100%;
 		background: $white;
-	}
+		padding-top: 0.6em;
+		padding-bottom: 0.6em;
 		
-	#top-bar-menu {
-		
-		.grid-x {
-			min-height: 60px;
-			align-items: center;
-			justify-content: space-between;
-			@include breakpoint(xmedium) {
-				align-items: flex-end;
-				min-height: 121px;
-			}
-			
-			ul#main-nav {
-				display: flex;
-				justify-content: flex-end;
-				
-				ul.submenu {
-					padding-top: 0.85em;
-					padding-bottom: 0.85em;
-					top: 40px;
-					
-					li.current-menu-item a:before {
-						left: .85rem;
-						right: auto;
-					}
-					
-				}
-				
-			}
-		
-			ul {
-				
-				li {
-					position: relative;
-				&.logo {
-					img {
-						width: 100%;
-						max-width: 115px;
-							
-						@include breakpoint(xmedium) {
-							max-width: 190px;
-						}
-						
-					}
-				}
-				
-				a {
-					font-family: $font-sans;
-					font-size: rem-calc(16);
-					color: $black;
-					letter-spacing: 0;
-					font-weight: bold;
-					text-transform: uppercase;
-				}
-				
-				&.current-menu-item > a:before {
-					content: '';
-					position: absolute;
-					width: 58px;
-					height: 6px;
-					background-color: $red;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					margin: auto;
-				}
-				
-				&.menu-item-has-children.current-menu-item a:before {
-					right: 0.75rem;
-				}
-					
-				}
-				
-			}	
-			
-			.top-bar-right {
-				
-				a.mobile-toggle {
-					position: relative;
-					width: 30px;
-					height: 29px;
-					padding: 0;
-					
-					span {
-						position: absolute;
-						display: inline-block;
-						width: 100%;
-						height: 3px;
-						background-color: $black;
-						border-radius: 3px;
-						
-					&:nth-child(1) {
-						top: 5px;
-					}
-
-					&:nth-child(2) {
-						top: 13px;
-					}
-					
-					&:nth-child(3) {
-						top: 21px;
-					}
-											
-					}
-					
-				&[aria-expanded="true"] {
-					
-				}
-					
-				}
-				
-				@include breakpoint(xmedium) {
-					padding-bottom: 1.35em;
-				}
-			}
-			
+		@include breakpoint (tablet) {
+			padding-top: 2.55em;
+			padding-bottom: 2.05em;
 		}
 		
 	}
 		
+	.top-bar-right {
+		
+		.inner {
+		    display: flex;
+			width: 100%;
+    			
+			ul#main-nav {
+				li {
+					margin-left: 1.6em;
+					
+					a {
+						text-transform: uppercase;
+						color: $black;
+					}
+					
+				&:not(:first-child) {
+					position: relative;
+					
+					&:before {
+						content: "/";
+					    position: absolute;
+					    transform: rotateY(180deg) translateX(19px) translateY(-7px);
+					}
+					
+				}
+					
+				}
+			}
+			
+			ul.menu.social {
+			    width: auto;
+			    flex: 1 1 0px;
+			    display: flex;
+			    align-items: center;
+			    flex-wrap: nowrap;
+			    margin-top: -0.1em;
+			    
+			    li {
+					font-size: rem-calc(24);
+					margin-left: 0.4em;
+					
+				
+				&:first-child {
+					@media screen and (max-width: 339px) {
+						margin-left: 0;
+					}
+				}		
+			
+					
+				@media screen and (min-width: 440px) {
+					font-size: rem-calc(27);
+					margin-left: 0.8em;
+					
+				}
+				    					
+					a {
+						color: $black;
+					}
+					
+			    }
+			    
+			}
+		
+		}
+		
+		a#nav-trigger {
+			width: 30px;
+			height: 27px;
+			position: relative;
+			margin-left: 0.8em;
+			
+		@media screen and (min-width: 440px) {
+			margin-left: 1em;
+		}
+			
+			span {
+				position: absolute;
+				left: 0;
+				right: 0;
+				display: block;
+				width: 30px;
+				height: 3px;
+				background-color: $black;
+				
+			&:nth-child(1) {
+				top: 3px;
+			}
+
+			&:nth-child(2) {
+				top: 12px;
+			}
+			
+			&:nth-child(3) {
+				bottom: 3px;
+			}
+							
+			}
+			
+		}	
+		
+	}
+							
 }
 
 div#off-canvas {
 	padding-top: 1em;
-	
-	ul {
-		li {
-			position: relative;
-			
-		&.current-menu-item > a:before {
-			content: '';
-			position: absolute;
-			width: 58px;
-			height: 6px;
-			background-color: $red;
-			bottom: 0;
-			left: .85rem;
-			right: 0;
-		}
-			
-			a {
-				margin-top: 0.8em;				
-				font-family: $font-sans;
-				font-size: rem-calc(16);
-				color: $black;
-				letter-spacing: 0;
-				font-weight: bold;
-				text-transform: uppercase;
-			}
-		}
-	}
 	
 }

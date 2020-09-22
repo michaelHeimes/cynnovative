@@ -6,27 +6,53 @@
  */
 ?>
 
-<div class="top-bar" id="top-bar-menu">
-	<div class="top-bar-left float-left">
-		<ul class="menu">
+<div id="top-bar-menu">
+	<div class="grid-container">
+		<div class="grid-x grid-padding-x align-justify">
 			
-			<?php 
-			$image = get_field('header_logo', 'option');
-			if( !empty( $image ) ): ?>
-			    <li><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></a></li>
-			    <?php else:?>
-			    <li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
-			<?php endif; ?>
+			<div class="top-bar-left cell small-7 tablet-shrink">
+				<ul class="menu">
+					
+					<?php 
+					$image = get_field('header_logo', 'option');
+					if( !empty( $image ) ): ?>
+					    <li><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></a></li>
+					    <?php else:?>
+					    <li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
+					<?php endif; ?>
+					
+				</ul>
+			</div>
 			
-		</ul>
-	</div>
-	<div class="top-bar-right show-for-medium">
-		<?php joints_top_nav(); ?>	
-	</div>
-	<div class="top-bar-right float-right show-for-small-only">
-		<ul class="menu">
-			<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
-			<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'jointswp' ); ?></a></li>
-		</ul>
+			<div class="top-bar-right cell shrink">
+				
+				<div class="inner">
+				
+					<?php joints_top_nav(); ?>	
+					
+					<ul class="menu social">
+						
+						<li><a href="<?php the_field('twitter_link', 'option');?>"><i class="fab fa-twitter"></i></a></li>
+						
+						<li><a href="<?php the_field('linkedin_link', 'option');?>"><i class="fab fa-linkedin"></i></a></li>
+						
+					</ul>
+				
+					<ul class="menu hide-for-xlarge">
+						<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
+						<li>
+							<a id="nav-trigger" data-toggle="off-canvas">
+								<span></span>
+								<span></span>
+								<span></span>							
+							</a>
+						</li>
+					</ul>
+				
+				</div>
+				
+			</div>
+			
+		</div>
 	</div>
 </div>

@@ -1,0 +1,108 @@
+.page-template-page-job-openings {
+	
+	section.pi-copy {
+		padding-top: 5.55em;
+		padding-bottom: 8.7em;
+	}	
+	
+	section.jobs-wrap {
+		padding-top: 4.3em;
+		
+		ul.accordion {
+			li.single-job {
+				padding-bottom: 2.8em;
+				
+				.inner {
+					padding-right: 2.8em;
+				}
+				
+				a.accordion-title {
+					background: $black;
+					color: $white;
+					position: relative;
+					
+					@media screen and (max-width: 640px) {
+						padding-left: 0;
+						padding-right: 0;
+					}
+					
+					.gradient-bg {
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						opacity: 0;
+						transition: opacity 0.5s ease;
+					}
+					
+				&[aria-selected="true"] {
+					.gradient-bg {
+						opacity: 1;
+					}
+					
+					.grid-container .inner:before {
+						transform: translateY(-50%) rotate(90deg);
+					}
+					
+				}
+					
+				&:before {
+					content: '';
+				}
+				
+					.grid-container {
+						position: relative;	
+					
+					.inner {	
+						position: relative;
+						
+					&:before {
+						position: absolute;
+						right: 0.9375rem;
+						z-index: 1;
+						content: url(/wp-content/themes/cynnovative/assets/images/chevron-right-white.png);
+						margin-top: 0;
+						top: 50%;
+						transform: translateY(-50%) rotate(0deg);
+						transition: transform 0.5s ease;
+					}
+											
+						h2,
+						h3 {
+							color: $white;
+						}
+						
+					}
+					
+					}
+
+				}
+				
+				.accordion-content {
+
+					@media screen and (max-width: 640px) {
+						padding-left: 0;
+						padding-right: 0;
+						padding-bottom: 0;
+					}
+
+					.single-section {
+						padding-bottom: 2.75em;
+						
+						@include breakpoint(medium) {
+							padding-bottom: 5.75em;
+						}
+						
+						h4 {
+							margin-bottom: 1.18em;
+						}
+					}					
+				}
+				
+			}
+		}
+		
+	}
+	
+}
