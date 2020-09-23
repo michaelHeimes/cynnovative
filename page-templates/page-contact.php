@@ -24,13 +24,7 @@ get_header(); ?>
 				
 				
 				<?php if($title_banner = get_field('title_banner')):?>
-				<section class="title-banner gradient-bg text-center">
-					<div class="grid-container">
-						<div class="grid-x grid-padding-x">
-							<h1 class="title cell small-12 text-center"><?php echo $title_banner;?></h1>
-						</div>
-					</div>
-				</section>
+					<?php get_template_part('partials/partial', 'title-banner');?>
 				<?php endif;?>
 				
 				

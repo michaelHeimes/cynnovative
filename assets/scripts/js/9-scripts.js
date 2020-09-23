@@ -1,87 +1,10 @@
 (function($) {
 		
 // 	Home Pinned Scroll Slider
-/*
-	gsap.registerPlugin(ScrollTrigger);
-	
-	var $slideCount = $('.pss-slides .single-slide').length;
-	var $slideHeight = $('.pss-slides .single-slide:nth-of-type(1)').height();
-	var $duration = 400 * $slideCount;
-	
-	console.log($slideCount);
-	console.log($slideHeight);	
-	console.log($duration);
-
-
-	
-	ScrollTrigger.create({
-		trigger: ".pss-slides",
-		markers: true,
-		start: "top top", 
-		end: $duration,
-		pin: ".pss-slides"
-	});	
-	
-	$('.pss-slides .single-slide').each(function() {
-		
-		console.log(this);
-
-		ScrollTrigger.create({
-			trigger: this,
-			markers: true,
-			start: "top 100px", 
-			end: "400px",
-			pin: this,
-			pinSpacing: false,
-			toggleClass: {targets: this, className: "active"}
-		});	
-		
-	});
-	
-*/
 
 	if($('.typing-title').length ) {
 		
-		var $wrap = $('.typing-title h1.title');
-/*
-		var $title_1 = $('.typing-title h1.title span:nth-child(1)');
-		var $title_2 = $('.typing-title h1.title span:nth-child(2)');
-*/
-		
-/*
-		var $title_1_text = site_js.title_line_1;
-		
-		var $title_1 = '<span>' + $title_1_text + '</span>';
-		
-		$($wrap).append($title_1);
-*/
-		
-		
-/*
-		var tl = new TimelineMax({
-			paused:true
-		});
-		// letter animation
-		tl.to(".typing-title span:first-child", 4, {
-			width: "20.18em",
-			ease:  SteppedEase.config(37)
-		}, 0);
-		tl.to(".anim-typewriter", 2, {
-			width: "0",
-			ease:  SteppedEase.config(37)
-		}, 6);
-		// text cursor animation
-		tl.fromTo(".anim-typewriter", 0.5, {
-			"border-right-color": "rgba(255,255,255,0.75)"
-		}, {
-			"border-right-color": "rgba(255,255,255,0)",
-			repeat: -1,
-			ease:  SteppedEase.config(37)
-		}, 0);
-		
-		tl.play();
-*/
-
+	var $wrap = $('.typing-title h1.title');
 
 	typing( 0, $('.typewriter-text').data('text') );
 	
@@ -125,6 +48,14 @@
 			
 	}
 	
+	
+	if($('h1.title').length ) {
+		window.onload = function() {
+			console.log("loaded");
+		var str = $(".title-banner .title").text();
+		str.replace("|", "W3Schools");	
+		}
+	}
 	
 	
 	if($('.pss-slides').length ) {

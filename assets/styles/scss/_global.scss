@@ -39,40 +39,61 @@ section.title-banner{
 		align-items: center;
 		
 		@include breakpoint (medium) {
+			min-height: 439px;
+		}
+
+		@include breakpoint (tablet) {
 			min-height: 639px;
 		}
 		
 		h1.title {
-			font-size: 9.68vw;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			font-size: 7.5vw;
 			line-height: 1.0778;
+			transition: font-size 0.3s ease;
 /*
 			padding-top: 1.434em;
 			padding-bottom: 0.95em;
 */
 			
-			@include breakpoint (max) {
-				font-size: 163px;
+			@include breakpoint (medium) {
+				font-size: 7vw;
 			}
+			
+			@include breakpoint (tablet) {
+				font-size: 6vw;
+			}
+			
+			@include breakpoint (max) {
+				font-size: 101px;
+			}
+						
 		}
 	}
 }
 
-h2.big-h2 {	
-    font-size: rem-calc(28);
-    
-    @include breakpoint (medium) {
-	    font-size: rem-calc(40);
-    }
-    
-    @include breakpoint (large) {
-	    font-size: rem-calc(46);
-    }
-
-    @include breakpoint (xlarge) {
-	    font-size: rem-calc(53);
-    }
-    
+img.type-cursor {
+    width: 5.38vw;
+	margin-top: -5.7vw;
+	
+	@include breakpoint (medium) {
+		width: 4vw;
+		margin-top: -3.7vw;
+	}
+	
+	@include breakpoint (tablet) {
+		width: 3.45vw;
+		margin-top: -3vw;
+	}
+	
+	@include breakpoint(max) {
+		width: 5.4em;
+		margin-top: -3.7em;
+	}
+	
 }
+
 
 p,
 ul,
@@ -92,7 +113,7 @@ section.cc-copy {
 		p {
 			text-transform: uppercase;
 			color: $white;
-			font-size: rem-calc(26);
+			font-size: rem-calc(24);
 			line-height: 1.428;
 			
 			@include breakpoint (medium) {

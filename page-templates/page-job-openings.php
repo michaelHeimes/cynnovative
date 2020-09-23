@@ -95,10 +95,16 @@ get_header(); ?>
 													<h4>
 														<?php the_sub_field('heading');?>
 														
-														<?php $light_heading = get_field('colors');
-															if( $light_heading && in_array('yes', $light_heading) ):?>
-															<span><?php the_field('light-font_sub-heading');?></span>
-														<?php endif;?>
+											        	<?php
+														$sub = get_sub_field('add_requirement_label');
+														if( $sub && in_array('yes', $sub) ):?>	
+														<br>									        	
+											        	<span>
+											        		<img class="type-cursor" src="/wp-content/themes/cynnovative/assets/images/Cynnovative_Slash_White.svg"/>
+											        		<?php the_sub_field('requirement_label');?>
+											        	</span>
+											        	<?php endif;?>
+										        	
 													</h4>
 													<div class="big-copy copy-wrap">
 														<?php the_sub_field('copy');?>
@@ -109,7 +115,7 @@ get_header(); ?>
 												<?php endwhile;?>
 											<?php endif;?>
 											
-											<div class="job-footnote cell small-12">
+											<div class="big-copy job-footnote cell small-12">
 												<?php the_field('job_post_footnote', 'option');?>
 											</div>
 											

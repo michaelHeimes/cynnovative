@@ -15,18 +15,7 @@
 					display: inline;
 				}				
 			}
-			
-			img.type-cursor {
-			    width: 5.38vw;
-				margin-top: -3.7vw;
-				
-				@include breakpoint(max) {
-					width: 5.4em;
-					margin-top: -3.7em;
-				}
-				
-			}
-			
+						
 		}
 	}
 		

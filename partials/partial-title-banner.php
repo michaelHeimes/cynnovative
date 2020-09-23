@@ -1,7 +1,18 @@
 <section class="title-banner text-center">
 	<div class="grid-container fluid">
 		<div class="grid-x grid-padding-x">
-			<h1 class="title cell small-12 text-center"><?php the_field('title_banner');?></h1>
+			<h1 class="title cell small-12 text-center">
+				<?php the_field('title_banner');?>
+
+<!--
+				<?php				
+				$text = get_field('title_banner');
+				$stripped_text = str_replace('|', '<span><img class="type-cursor" src="/wp-content/themes/cynnovative/assets/images/Cynnovative_Slash_White.svg"/></span>',$text);
+				echo $stripped_text;
+				?>
+-->
+				
+			</h1>
 		</div>
 	</div>
 </section>
