@@ -37,6 +37,16 @@ get_header(); ?>
 					</div>
 				</section>	
 				<?php endif;?>
+				
+				<section class="form-wrap">
+					<div class="grid-container">
+						<div class="grid-x grid-padding-x">
+							<div class="cell small-12">
+								<?php gravity_form( 1, false, false, false, '', true );?>
+							</div>
+						</div>
+					</div>
+				</section>
 
 											    					
 			</main> <!-- end #main -->

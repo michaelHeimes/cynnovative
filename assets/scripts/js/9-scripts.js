@@ -51,7 +51,6 @@
 	
 	if($('h1.title').length ) {
 		window.onload = function() {
-			console.log("loaded");
 		var str = $(".title-banner .title").text();
 		str.replace("|", "W3Schools");	
 		}

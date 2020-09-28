@@ -156,8 +156,11 @@ section.cc-copy {
 }
 
 .button {
-	min-width: 362px;
 	font-weight: bold;
+	
+	@include breakpoint (medium) {
+		min-width: 362px;
+	}
 }
 
 /*********************
@@ -621,82 +624,6 @@ COMMENT FORM STYLES
 	margin: 0 20px 1.1em;
 }
 
-/*********************
-GRAVITY FORM STYLES
-*********************/
-.gform_wrapper {
-	form {
-		max-width: 300px !important;
-		margin: 0 !important;
-		
-		.gform_body {
-			font-family: $font-sans;
-			ul {
-				li {
-					margin-top: 0;
-					padding-left: 0;
-					
-					input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-						width: 100%;
-						height: 36px;
-						padding: 0 0.75em;
-						margin-bottom: 0;
-						background: $white;
-						box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
-						font-size: rem-calc(14);
-						
-					&::placeholder {
-						font-size: rem-calc(14);
-						color: #BBBBBB;
-					}
-						
-					}
-					
-					textarea,
-					select {
-						font-size: rem-calc(14);
-						border: 1px solid #979797;
-						box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20), inset 0 2px 0 0 #FFFFFF;
-						border-radius: 3px;
-					}
-					
-					.ginput_container_select {
-						select {
-							height: 36px;
-							padding: 0 0.75em;
-							background-image: url(../images/select-triangles.svg);
-							background-size: 10px;
-							background-position: 100% 50%;
-							background-repeat: no-repeat;
-						}
-					}
-					
-					&.resume {
-						margin-top: 0;
-						
-						label {
-							
-						}
-						
-						.ginput_container_fileupload {
-							
-							input[type=file] {
-								width: 100% !important;
-							}	
-						}
-						
-						.gfield_description {
-							padding-top: 0;
-						}
-						
-					}
-					
-				}
-			}
-		
-		}
-	}
-}
 
 /*********************
 SIDEBARS & ASIDES
