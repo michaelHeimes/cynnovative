@@ -41,7 +41,7 @@ get_header(); ?>
 				<section class="form-wrap">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
-							<div class="cell small-12">
+							<div class="cell small-12 medium-10 medium-offset-1 tablet-8 tablet-offset-2">
 								<?php gravity_form( 1, false, false, false, '', true );?>
 							</div>
 						</div>

@@ -3,7 +3,12 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
-
+/*********************
+EDITOR STYLES
+*********************/
+body#tinymce h1 strong {
+	color: $primary-color;
+}
 
 /*********************
 GLOBAL STYLES
@@ -35,23 +40,30 @@ h5 {
 
 section.title-banner{
 	.grid-x {
-		min-height: 250px;
-		align-items: center;
+		padding-top: 30px;
+		padding-bottom: 10px;
 		
 		@include breakpoint (medium) {
-			min-height: 439px;
+
 		}
 
 		@include breakpoint (tablet) {
-			min-height: 639px;
+			padding-top: 50px;
+			padding-bottom: 20px;
 		}
 		
+		.title h1,
 		h1.title {
 			padding-top: 1em;
 			padding-bottom: 1em;
 			font-size: 7.5vw;
 			line-height: 1.0778;
 			transition: font-size 0.3s ease;
+			
+			strong {
+				color: $primary-color;
+			}
+			
 /*
 			padding-top: 1.434em;
 			padding-bottom: 0.95em;

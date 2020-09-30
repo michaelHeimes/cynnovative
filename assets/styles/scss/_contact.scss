@@ -1,6 +1,6 @@
 .page-template-page-contact {
 	
-	h1.title {
+	.title h1 {
 		color: $white;
 	}
 	
@@ -14,26 +14,26 @@
 			line-height: 1.333;
 			
 			@include breakpoint (medium) {
-				font-size: 5vw;
+				font-size: 4vw;
 			}
 			
 			@include breakpoint (tablet) {
-				font-size: 5vw;
+				font-size: 4vw;
 			}
 			
 			@include breakpoint (xlarge) {
-				font-size: 60px;
+				font-size: 40px;
 			}
 			
 		}
 	}
 	
 	.form-wrap {
-		padding-top: 4.2em;
+		padding-top: 0em;
 		padding-bottom: 4.9em;
 		
 		@include breakpoint (medium) {
-			padding-top: 11.2em;
+			padding-top: 4em;
 			padding-bottom: 6.9em;			
 		}
 		
@@ -44,10 +44,10 @@
 				width: 100%;
 				
 				.gform_body ul li {
-					margin-bottom: 2.6em;
+					margin-bottom: 1em;
 					
 					@include breakpoint (medium) {
-						margin-bottom: 4.6em;
+						margin-bottom: 1.5em;
 					}
 					
 				&:last-child {
@@ -60,11 +60,11 @@
 					
 					.gfield_label {
 						font-family: $header-font-family;
-						font-size: rem-calc(18);
+						font-size: rem-calc(16);
 						text-transform: uppercase;
 						
 						@include breakpoint (medium) {
-							font-size: rem-calc(35);
+							font-size: rem-calc(22);
 						}
 						
 						span.gfield_required {
@@ -93,10 +93,10 @@
 					    }
 					    
 					    input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
-						    height: 80px;
+						    height: 50px;
 						    
 						    @include breakpoint (medium) {
-							    height: 130px;
+							    height: 70px;
 						    }
 						    
 					    }

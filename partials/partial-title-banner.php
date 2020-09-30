@@ -1,7 +1,7 @@
 <section class="title-banner text-center <?php if(is_page_template('page-templates/page-contact.php')):?>gradient-bg<?php endif;?>">
 	<div class="grid-container fluid">
 		<div class="grid-x grid-padding-x">
-			<h1 class="title cell small-12 text-center">
+			<div class="title cell small-12 text-center">
 				<?php the_field('title_banner');?>
 
 <!--
@@ -12,7 +12,7 @@
 				?>
 -->
 				
-			</h1>
+			</div>
 		</div>
 	</div>
 </section>

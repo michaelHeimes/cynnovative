@@ -27,7 +27,7 @@ get_header(); ?>
 				<section class="title-banner text-center">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
-							<h1 class="title cell small-12 text-center"><?php echo $title_banner;?></h1>
+							<div class="title cell small-12 text-center"><?php echo $title_banner;?></div>
 						</div>
 					</div>
 				</section>
