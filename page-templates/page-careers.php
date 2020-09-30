@@ -128,7 +128,7 @@ get_header(); ?>
 												<div class="text-wrap cell small-12 medium-6 xxlarge-5">
 													<div class="grid-x grid-padding-x">
 														<h2 class="cell nfh small-12"><?php the_sub_field('heading');?></h2>
-														<p class="cell nfh small-12"><?php the_sub_field('copy');?></p>
+														<p class="big-copy cell nfh small-12"><?php the_sub_field('copy');?></p>
 													</div>
 												</div>
 										
