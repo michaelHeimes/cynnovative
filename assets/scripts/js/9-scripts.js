@@ -4,46 +4,61 @@
 
 	if($('.typing-title').length ) {
 		
-	var $wrap = $('.typing-title h1.title');
 
-	typing( 0, $('.typewriter-text').data('text') );
+        var cursor = true;
+        var speed = 750;
+        setInterval(() => {
+          if(cursor) {
+            document.getElementById('type-cursor').style.opacity = 0;
+            cursor = false;
+          }else {
+            document.getElementById('type-cursor').style.opacity = 1;
+            cursor = true;
+          }
+        }, speed);
+
+
+		
+		var $wrap = $('.typing-title h1.title');
 	
-	function typing( index, text ) {
-	
-	var textIndex = 1;
-	
-	var tmp = setInterval(function() {
-	  	if ( textIndex < text[ index ].length + 1 ) {
-				$('.typewriter-text').text( text[ index ].substr( 0, textIndex ) );
-				textIndex++;
-			} else {
-			setTimeout(function() { deleting( index, text ) }, 2000);
-			clearInterval(tmp);
-	  	}
-	
-	}, 150);
-	
-	}
-	
-	function deleting( index, text ) {
-	
-	var textIndex = text[ index ].length;
-	
-	var tmp = setInterval(function() {
-	
-		if ( textIndex + 1 > 0 ) {
-	    	$('.typewriter-text').text( text[ index ].substr( 0, textIndex ) );
-			textIndex--;
-	  	} else {
-	    	index++;
-	    if ( index == text.length ) { index = 0; }
-	    	typing( index, text );
-			clearInterval(tmp);
-	  }
-	
-		}, 150)
-	
-	}
+		typing( 0, $('.typewriter-text').data('text') );
+		
+		function typing( index, text ) {
+		
+		var textIndex = 1;
+		
+		var tmp = setInterval(function() {
+		  	if ( textIndex < text[ index ].length + 1 ) {
+					$('.typewriter-text').text( text[ index ].substr( 0, textIndex ) );
+					textIndex++;
+				} else {
+				setTimeout(function() { deleting( index, text ) }, 2000);
+				clearInterval(tmp);
+		  	}
+		
+		}, 150);
+		
+		}
+		
+		function deleting( index, text ) {
+		
+		var textIndex = text[ index ].length;
+		
+		var tmp = setInterval(function() {
+		
+			if ( textIndex + 1 > 0 ) {
+		    	$('.typewriter-text').text( text[ index ].substr( 0, textIndex ) );
+				textIndex--;
+		  	} else {
+		    	index++;
+		    if ( index == text.length ) { index = 0; }
+		    	typing( index, text );
+				clearInterval(tmp);
+		  }
+		
+			}, 150)
+		
+		}
 			
 			
 	}

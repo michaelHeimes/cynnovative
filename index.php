@@ -13,7 +13,7 @@ get_header(); ?>
 	
 		<div class="inner-content grid-padding-x">
 						
-			<section class="title-banner text-center">
+			<section class="title-banner gradient-bg text-center">
 				<div class="grid-container fluid">
 					<div class="grid-x grid-padding-x">
 						<h1 class="title cell small-12 text-center">Blog</h1>

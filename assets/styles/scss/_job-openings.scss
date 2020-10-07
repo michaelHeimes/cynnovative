@@ -88,10 +88,10 @@
 					}
 
 					.single-section {
-						padding-bottom: 2.75em;
+						padding-bottom: 2em;
 						
 						@include breakpoint(medium) {
-							padding-bottom: 5.75em;
+							padding-bottom: 4em;
 						}
 						
 						h4 {

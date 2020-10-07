@@ -56,6 +56,19 @@ header.header {
 					}
 					
 				}
+				
+					ul.submenu {
+						padding: 1em 1em 0;
+					    top: 32px;
+					    left: 50%;
+					    transform: translateX(-50%);
+					    
+					    li {
+						    text-align: center;
+						    margin: 0 0 1em;
+					    }
+					    
+	    			}
 					
 				}
 			}

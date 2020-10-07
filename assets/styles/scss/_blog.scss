@@ -13,6 +13,13 @@
 .blog,
 .archive {
 	
+	.title-banner {
+		margin-bottom: 7em;
+		h1.title {
+			color: $white;
+		}
+	}
+	
 	main {
 // 		padding-top: 5.8em;
 	

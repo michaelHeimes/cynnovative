@@ -19,7 +19,9 @@ GLOBAL STYLES
 }
 
 .big-copy,
-.big-copy p {
+.big-copy p,
+.big-copy ul li,
+.big-copy ol li {
 	font-size: rem-calc(24);
 	line-height: 1.35;
 	font-weight: 500;
@@ -83,6 +85,11 @@ section.title-banner{
 						
 		}
 	}
+}
+
+ol ol, ol ul, ul ol, ul ul {
+	margin-left: 1.75rem;
+	margin-bottom: 1.75rem;
 }
 
 img.type-cursor {

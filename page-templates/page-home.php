@@ -33,7 +33,7 @@ get_header(); ?>
 
 							</h1>
 							
-							<img class="type-cursor" src="/wp-content/themes/cynnovative/assets/images/Cynnovative_Slash_White.svg"/>
+							<img id="type-cursor" class="type-cursor" src="/wp-content/themes/cynnovative/assets/images/Cynnovative_Slash_White.svg"/>
 							
 						</div>
 					</div>
@@ -112,10 +112,20 @@ get_header(); ?>
 				if( $featured_posts ): ?>
 				<section class="grid-container blog-slider-wrap">
 				    <div class="blog-slider">
-				    <?php foreach( $featured_posts as $post ): 
-				
-				        // Setup this post for WP functions (variable must be named $post).
-				        setup_postdata($post); ?>
+					    
+					<?php 
+						$args = array(  
+					        'post_type' => 'post',
+					        'post_status' => 'publish',
+					        'posts_per_page' => -1,
+					        'order' => 'DESC'
+					    );
+					    
+					    $loop = new WP_Query( $args ); 
+					    while ( $loop->have_posts() ) : $loop->the_post(); 
+					    
+					?>
+				 
 				        <div class="single-blog text-center">
 					        
 				            <a href="<?php the_permalink(); ?>">
@@ -134,11 +144,10 @@ get_header(); ?>
 				            </a>
 				            
 				        </div>
-				    <?php endforeach; ?>
-				    </div>
-				    <?php 
-				    // Reset the global post object so that the rest of the page works correctly.
-				    wp_reset_postdata(); ?>
+					    
+					<?php endwhile;
+					wp_reset_postdata(); ?>
+
 				</section>
 				<?php endif; ?>
 			    					
