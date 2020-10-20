@@ -233,8 +233,7 @@
 				background-position: center center;
 				
 			&.it-1,
-			&it-2,
-			&.it-3 {
+			&it-2 {
 				height: 54.762vw;
 				
 				@include breakpoint(max) {
@@ -243,8 +242,8 @@
 				
 			}
 			
-			&.it-4,
-			&it-5 {
+			&.it-3,
+			&it-4 {
 				height: 38.334vw;
 				
 				@include breakpoint(max) {
@@ -262,14 +261,10 @@
 			}
 			
 			&.it-3 {
-				width: 100%;
-			}
-			
-			&.it-4 {
 				width: 70%;
 			}
 			
-			&.it-5 {
+			&.it-4 {
 				width: 30%;
 			}
 				

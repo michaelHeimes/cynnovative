@@ -23,13 +23,18 @@ get_header(); ?>
 				
 				<?php if($title_line_1 = get_field('title_line_1')):?>
 				<section class="title-banner text-center">
+											
 					<div class="grid-container">
+						
 						<div class="grid-x grid-padding-x align-center align-middle">
-								
+							
+							<h1 class="cell small-12 title"><?php the_field('title_line_1');?></h1>	
+
+				
 							<h1 class="title typing-title">
 <!-- 								<span><?php echo $title_line_1;?></span> -->
 								<span style="opacity:0;">|</span>
-								<span class='typewriter-text' data-text='[ "<?php echo $title_line_1;?> ", "<?php the_field('title_line_2')?>" ]'></span>
+								<span class='typewriter-text' data-text='[ "<?php the_field('title_line_2')?>" ]'></span>
 
 							</h1>
 							

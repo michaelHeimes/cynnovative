@@ -1,33 +1,6 @@
 .footer {
 	clear: both;
-
-	.pre-footer {
-		padding-top: 6.4em;
-		
-		@include breakpoint(medium) {
-			padding-top: 6.4em;
-		}
-				
-		.bar {
-			height: 9px;
-			width: 100%;
-			max-width: 305px;
-			margin: auto;
-		}
-		
-		h2 {
-			text-transform: uppercase;
-			font-size: rem-calc(40);
-			margin-top: 1.3em;
-			margin-bottom: 1.25em;
-			
-			@include breakpoint(medium) {
-				font-size: rem-calc(60);
-			}
-			
-		}
-		
-	}	
+	margin-top: 6.4em;
 	
 	.inner-footer {
 		padding-top: 6.2em;

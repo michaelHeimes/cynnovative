@@ -1,7 +1,6 @@
 (function($) {
 		
-// 	Home Pinned Scroll Slider
-
+// 	Home Typing Banner
 	if($('.typing-title').length ) {
 		
 
@@ -19,7 +18,7 @@
 
 
 		
-		var $wrap = $('.typing-title h1.title');
+// 		var $wrap = $('.typing-title h1.title');
 	
 		typing( 0, $('.typewriter-text').data('text') );
 		

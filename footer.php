@@ -9,18 +9,6 @@
  ?>
 					
 				<footer class="footer" role="contentinfo">
-					<div class="grid-container">
-						<div class="pre-footer grid-x grid-padding-x">
-							
-							<?php if ($footer_heading = get_field('footer_heading', 'option')):?>
-							<div class="cell small-12 text-center">
-								<div class="bar gradient-bg"></div>
-								<h2><?php echo $footer_heading;?></h2>
-							</div>
-							<?php endif;?>
-							
-						</div>
-					</div>
 											
 					<div class="inner-footer">
 						<div class="grid-container">

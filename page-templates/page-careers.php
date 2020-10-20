@@ -224,41 +224,24 @@ get_header(); ?>
 								$imgID1 = get_sub_field('image_1');
 								$imgSize1 = "full";
 								$imgArr1 = wp_get_attachment_image_src( $imgID1, $imgSize1 );
-							
-							?>
-							<?php
+
 								$imgID2 = get_sub_field('image_2');
 								$imgSize2 = "full";
 								$imgArr2 = wp_get_attachment_image_src( $imgID2, $imgSize2 );
-							
-							?>
-							
-							<?php
+
 								$imgID3 = get_sub_field('image_3');
 								$imgSize3 = "full";
 								$imgArr3 = wp_get_attachment_image_src( $imgID3, $imgSize3 );
-							
-							?>
-							
-							<?php
+
 								$imgID4 = get_sub_field('image_4');
 								$imgSize4 = "full";
 								$imgArr4 = wp_get_attachment_image_src( $imgID4, $imgSize4 );
-							
-							?>
-							
-							<?php
-								$imgID5 = get_sub_field('image_5');
-								$imgSize5 = "full";
-								$imgArr5 = wp_get_attachment_image_src( $imgID5, $imgSize5 );
-							
 							?>																		
 							
 							<div class="img-tile it-1" style="background-image: url(<?php echo $imgArr1[0]; ?> );"></div>
 							<div class="img-tile it-2" style="background-image: url(<?php echo $imgArr2[0]; ?> );"></div>
 							<div class="img-tile it-3" style="background-image: url(<?php echo $imgArr3[0]; ?> );"></div>
 							<div class="img-tile it-4" style="background-image: url(<?php echo $imgArr4[0]; ?> );"></div>
-							<div class="img-tile it-5" style="background-image: url(<?php echo $imgArr5[0]; ?> );"></div>
 							
 						
 							<?php endwhile;?>

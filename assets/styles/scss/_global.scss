@@ -94,21 +94,21 @@ ol ol, ol ul, ul ol, ul ul {
 
 img.type-cursor {
     width: 5.38vw;
-	margin-top: -5.7vw;
+	margin-top: -12.8vw;
 	
 	@include breakpoint (medium) {
 		width: 4vw;
-		margin-top: -3.7vw;
+		margin-top: -10.5vw;
 	}
 	
 	@include breakpoint (tablet) {
 		width: 3.45vw;
-		margin-top: -3vw;
+		margin-top: -9vw;
 	}
 	
 	@include breakpoint(max) {
-		width: 5.4em;
-		margin-top: -3.7em;
+		width: 3.6em;
+		margin-top: -9em;
 	}
 	
 }

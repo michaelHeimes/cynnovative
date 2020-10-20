@@ -1,17 +1,26 @@
 .home {
 		
 	section.title-banner {
+				
 		.grid-x {
-			flex-wrap: nowrap;
 			
-			h1.typing-title {
+			.title:nth-child(1) {
+				padding-bottom: 0;
+			}
+
+			.title:nth-child(2) {
+				padding-top: 0;
+			}
+						
+			.typing-title {
+				display: block;
 				padding-right: 1.75vw;
 				
 				@include breakpoint(max) {
 					padding-right: 0.18em;
 				}
     
-				span {
+				span:not(.typing-title) {
 					display: inline;
 				}				
 			}
