@@ -90,7 +90,11 @@
 				    transform: rotateY(180deg) translateX(19px) translateY(-7px);
 				}
 				
-			}				
+			}
+			
+				ul.sub-menu {
+					display: none;
+				}				
 				
 			}			
 		}

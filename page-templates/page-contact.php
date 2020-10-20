@@ -48,6 +48,21 @@ get_header(); ?>
 					</div>
 				</section>
 
+				<?php if($map_heading = get_field('map_heading')):?>
+				<section class="pi-copy">
+					<div class="grid-container">
+						<div class="grid-x grid-padding-x">
+							<p class="cell small-12 text-center"><?php echo $map_heading;?></p>			
+							
+							<div class="map-wrap cell small-12 text-center">
+								<?php the_field('map_google_map_embed');?>
+							</div>
+										
+						</div>
+					</div>
+				</section>	
+				<?php endif;?>
+
 											    					
 			</main> <!-- end #main -->
 		    
