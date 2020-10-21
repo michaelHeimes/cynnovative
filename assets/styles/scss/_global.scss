@@ -22,12 +22,12 @@ GLOBAL STYLES
 .big-copy p,
 .big-copy ul li,
 .big-copy ol li {
-	font-size: rem-calc(24);
+	font-size: rem-calc(19.2);
 	line-height: 1.35;
 	font-weight: 500;
 	
 	@include breakpoint (tablet) {
-		font-size: rem-calc(34);
+		font-size: rem-calc(27.2);
 	}
 	
 }
@@ -58,7 +58,7 @@ section.title-banner{
 		h1.title {
 			padding-top: 1em;
 			padding-bottom: 1em;
-			font-size: 7.5vw;
+			font-size: 6vw;
 			line-height: 1.0778;
 			transition: font-size 0.3s ease;
 			
@@ -72,15 +72,15 @@ section.title-banner{
 */
 			
 			@include breakpoint (medium) {
-				font-size: 7vw;
+				font-size: 5.6vw;
 			}
 			
 			@include breakpoint (tablet) {
-				font-size: 6vw;
+				font-size: 4.8vw;
 			}
 			
 			@include breakpoint (max) {
-				font-size: 101px;
+				font-size: rem-calc(80.8);
 			}
 						
 		}
@@ -93,22 +93,22 @@ ol ol, ol ul, ul ol, ul ul {
 }
 
 img.type-cursor {
-    width: 5.38vw;
-	margin-top: -12.8vw;
+    width: 4.304vw;
+	margin-top: -10.24vw;
 	
 	@include breakpoint (medium) {
-		width: 4vw;
-		margin-top: -10.5vw;
+		width: 3.2vw;
+		margin-top: -8.4vw;
 	}
 	
 	@include breakpoint (tablet) {
-		width: 3.45vw;
-		margin-top: -9vw;
+		width: 2.76vw;
+		margin-top: -7.2vw;
 	}
 	
 	@include breakpoint(max) {
-		width: 3.6em;
-		margin-top: -9em;
+		width: 2.88em;
+		margin-top: -7.2em;
 	}
 	
 }
@@ -117,14 +117,14 @@ img.type-cursor {
 p,
 ul,
 li {
-	font-size: rem-calc(20);
+	font-size: rem-calc(16);
 }
 
 section.cc-copy {
 	background-color: $black;
-	padding-top: 5em;
-    padding-bottom: 3.5em;
-	min-height: 460px;
+	padding-top: 4em;
+    padding-bottom: 2.8em;
+	min-height: 368px;
 	display: flex;
     align-items: center;
 	
@@ -132,11 +132,11 @@ section.cc-copy {
 		p {
 			text-transform: uppercase;
 			color: $white;
-			font-size: rem-calc(24);
+			font-size: rem-calc(19.2);
 			line-height: 1.428;
 			
 			@include breakpoint (medium) {
-				font-size: rem-calc(35);
+				font-size: rem-calc(28);
 			}
 			
 		}
@@ -147,14 +147,14 @@ section.cc-copy {
 	color: $black;
 	font-family: $header-font-family;
 	text-transform: uppercase;
-	font-size: rem-calc(20);
+	font-size: rem-calc(16);
 	
 	@include breakpoint (medium) {
-		font-size: rem-calc(22);
+		font-size: rem-calc(17.6);
 	}
 	
 	@include breakpoint (tablet) {
-		font-size: rem-calc(25);
+		font-size: rem-calc(20);
 	}
 	
 	img {
@@ -178,7 +178,7 @@ section.cc-copy {
 	font-weight: bold;
 	
 	@include breakpoint (medium) {
-		min-width: 362px;
+		min-width: 290px;
 	}
 }
 
@@ -189,26 +189,26 @@ GRADIENT CTA
 	
 	h2 {
 		text-transform: uppercase;
-		font-size: 8.5vw;
+		font-size: 6.8vw;
 		line-height: 1;
-		padding-top: 3.18em;
+		padding-top: 2.544em;
 		
 		@include breakpoint (medium) {
-			font-size: rem-calc(60);
+			font-size: rem-calc(48);
 		}
 		
 	}
 	
 	p {
-		font-size: rem-calc(20);
+		font-size: rem-calc(16);
 		line-height: 1.66666;
 		text-transform: uppercase;
 		font-weight: 500;
 		margin: 0;
-		padding-bottom: 2.1em;
+		padding-bottom: 1.68em;
 		
 		@include breakpoint (medium) {
-			font-size: rem-calc(30);
+			font-size: rem-calc(24);
 		}
 		
 	}
@@ -217,10 +217,10 @@ GRADIENT CTA
 		min-width: 0;
 		background-color: $white;
 		color: $black;
-		margin-bottom: 5.68em;
+		margin-bottom: 4.544em;
 		
 		@include breakpoint (medium) {
-			min-width: 362px;
+			min-width: 289px;
 		}
 		
 	}

@@ -18,10 +18,10 @@
 				flex-direction: row-reverse;
 				
 				.text-wrap {
-					padding-right: 2.2em;
+					padding-right: 1.76em;
 					
 					@include breakpoint(tablet) {
-						padding-right: 4.2em;
+						padding-right: 3.36em;
 					}
 					
 				}
@@ -56,24 +56,24 @@
 		.text-wrap {
 			max-width: 685px;
 			padding-left: .9375rem;
-			padding-top: 4em;
-			padding-bottom: 5.2em;
+			padding-top: 3.2em;
+			padding-bottom: 4.16em;
 			
 			@include breakpoint(medium) {
-				padding-left: 2.2em;
-				padding-top: 5.5em;
-				padding-bottom: 7.5em;
+				padding-left: 1.76em;
+				padding-top: 4.4em;
+				padding-bottom: 6em;
 			}
 				
 			@include breakpoint(tablet) {
-				padding-left: 4.2em;
-				padding-top: 7.5em;
-				padding-bottom: 10.5em;
+				padding-left: 3.36em;
+				padding-top: 6em;
+				padding-bottom: 8.4em;
 			}
 			
 			@include breakpoint(large) {
-				padding-top: 14.3em;
-				padding-bottom: 19.02em;
+				padding-top: 11.44em;
+				padding-bottom: 15.216em;
 			}
 			
 			h2 {

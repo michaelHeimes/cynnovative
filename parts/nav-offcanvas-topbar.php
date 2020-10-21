@@ -16,7 +16,7 @@
 					<?php 
 					$image = get_field('header_logo', 'option');
 					if( !empty( $image ) ): ?>
-					    <li><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></a></li>
+					    <li class="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></a></li>
 					    <?php else:?>
 					    <li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
 					<?php endif; ?>
