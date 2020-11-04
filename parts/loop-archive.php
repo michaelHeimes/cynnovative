@@ -20,16 +20,18 @@
 			
 				<header class="article-header">
 					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+					<div class="date"><?php $post_date = get_the_date( 'F s, Y' ); echo $post_date?></div>
+					<div class="cats">
+						<?php 
+echo get_the_category_list(', ');
+						?>				
+					</div>
 				</header> <!-- end article header -->
 						
-				<section class="entry-content" itemprop="text">
+				<section class="entry-content big-copy" itemprop="text">
 					<?php the_excerpt('<button class="tiny">' . __( 'Read more...', 'jointswp' ) . '</button>'); ?>
 				</section> <!-- end article section -->
-									
-				<footer class="article-footer">
-			    	<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointswp') . '</span> ', ', ', ''); ?></p>
-				</footer> <!-- end article footer -->	
-			
+												
 			</div>
 			
 		</div>

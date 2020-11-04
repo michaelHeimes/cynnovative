@@ -27,8 +27,14 @@
 			
 		}
 		
-		.mapouter {
-			margin: auto;
+		.grid-container.fluid {
+			padding: 0;
+		
+			.mapouter {
+				margin: auto;
+				width: 100% !important;
+			}
+		
 		}
 		
 	}
@@ -123,6 +129,10 @@
 			}
 			
 		}
+	}
+	
+	footer.footer {
+		margin-top: 0;
 	}
 	
 }

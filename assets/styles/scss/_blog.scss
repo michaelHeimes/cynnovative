@@ -36,9 +36,15 @@
 		}
 	
 		h2 {
+			margin-bottom: 0;
 			a {
 				color: $black;
 			}
+			
+		}
+		
+		.date {
+			font-weight: bold;
 		}
 	
 	}

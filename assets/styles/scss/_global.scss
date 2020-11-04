@@ -58,8 +58,10 @@ section.title-banner{
 		h1.title {
 			padding-top: 1em;
 			padding-bottom: 1em;
-			font-size: 6vw;
+			font-size: 5.7vw;
 			line-height: 1.0778;
+			padding-left: .3em;
+			padding-right: .3em;
 			transition: font-size 0.3s ease;
 			
 			strong {
@@ -72,15 +74,15 @@ section.title-banner{
 */
 			
 			@include breakpoint (medium) {
-				font-size: 5.6vw;
+				font-size: 5.32vw;
 			}
 			
 			@include breakpoint (tablet) {
-				font-size: 4.8vw;
+				font-size: 4.56vw;
 			}
 			
 			@include breakpoint (max) {
-				font-size: rem-calc(80.8);
+				font-size: rem-calc(76.76);
 			}
 						
 		}
