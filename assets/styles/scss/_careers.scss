@@ -114,16 +114,46 @@
 		}
 	}
 	
-	.contractor-slider {
+	.contractor-slider.grid-rows {
 		
-		.single-slide {
+		.slick-track {
+			display: flex;
+		}
+		
+		.single-slide.single-row {
 			padding-left: 2em;
 			padding-right: 2em;
+			display: flex;
+			height: auto;
 			
-			h2 {
-				@media screen and (max-width: 400px) {
-					font-size: rem-calc(20);
+			.grid-container {
+				width: 100%;
+			
+				h2 {
+					@media screen and (max-width: 400px) {
+						font-size: rem-calc(20);
+					}
 				}
+				
+				.text-wrap {
+					padding-top: 3.2em;
+					padding-bottom: 4.16em;
+					
+					@include breakpoint(medium) {
+						padding-top: 5.5em;
+						padding-bottom: 6.6em;						
+					}
+					
+					@include breakpoint(tablet) {
+						padding-top: 5.5em;
+						padding-bottom: 7em;										}
+
+					@include breakpoint(large) {
+						padding-top: 7em;
+						padding-bottom: 11em;										}
+					
+				}
+			
 			}
 			
 		}

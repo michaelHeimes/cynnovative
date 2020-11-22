@@ -183,6 +183,14 @@
 	}
 	
 	
+// 	Grid Rows
+	if ( $('.grid-rows').length ) {
+		
+
+		
+	}
+	
+	
 // 	Blog Slider
 	$('.blog-slider').slick({
 		infinite: true,

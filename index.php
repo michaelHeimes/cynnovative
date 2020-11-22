@@ -16,7 +16,7 @@ get_header(); ?>
 			<section class="title-banner gradient-bg text-center">
 				<div class="grid-container fluid">
 					<div class="grid-x grid-padding-x">
-						<h1 class="title cell small-12 text-center">Blog</h1>
+						<h1 class="title cell small-12 text-center">Cynnovations</h1>
 					</div>
 				</div>
 			</section>
