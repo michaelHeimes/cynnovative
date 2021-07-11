@@ -43,6 +43,7 @@
 		
 		.img-wrap {
 			background-size: cover;
+			background-position: 50%;
 			height: 133vw;
 			
 			@include breakpoint(medium) {

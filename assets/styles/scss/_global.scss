@@ -18,6 +18,22 @@ GLOBAL STYLES
 	margin: auto;
 }
 
+.error404 {
+	article {
+		padding-top: 5em;
+		h1 {
+			span {
+				font-size: rem-calc(100);
+			}
+		}
+		
+		p {
+			font-size: rem-calc(20);
+		}
+		
+	}
+}
+
 .big-copy,
 .big-copy p,
 .big-copy ul li,

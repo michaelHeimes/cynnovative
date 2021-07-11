@@ -66,49 +66,76 @@ get_header(); ?>
 						
 							<?php endwhile;?>
 						<?php endif;?>
-					<?php endwhile;?>
+					<?php endwhile;?>					
+				<?php endif;?>
+
 					
-					<div class="single-row case-study">
-							<div class="grid-container fluid">
-								<div class="grid-x grid-padding-x">
-								
-									<?php
-										$imgID = get_field('cs_image');
-										$imgSize = "full";
-										$imgArr = wp_get_attachment_image_src( $imgID, $imgSize );
-									?>
-									<div class="img-wrap cell small-12 medium-6" style="background-image: url(<?php echo $imgArr[0]; ?> );">
-									</div>
-									
-									<div class="text-wrap cell small-12 medium-6">
+				<?php if( have_rows('case_studies') ):?>
+					<?php while ( have_rows('case_studies') ) : the_row();?>	
+						<?php if( have_rows('single_case_study') ):?>
+							<?php while ( have_rows('single_case_study') ) : the_row();?>	
+							
+							<div class="single-row case-study">
+									<div class="grid-container fluid">
 										<div class="grid-x grid-padding-x">
-											<div class="cs-label-wrap cell nfh small-12">
-												<h3>Case Study</h3>
-												<div class="bar gradient-bg"></div>
+										
+											<?php
+												$imgID = get_sub_field('cs_image');
+												$imgSize = "full";
+												$imgArr = wp_get_attachment_image_src( $imgID, $imgSize );
+											?>
+											<div class="img-wrap cell small-12 medium-6" style="background-image: url(<?php echo $imgArr[0]; ?> );">
 											</div>
-											<h2 class="cell nfh small-12"><?php the_field('cs_heading');?></h2>
-											<p class="big-copy cell nfh small-12"><?php the_field('cs_copy');?></p>
 											
-											<?php 
-											$link = get_field('cs_link');
-											if( $link ): 
-											    $link_url = $link['url'];
-											    $link_title = $link['title'];
-											    $link_target = $link['target'] ? $link['target'] : '_self';
-											    ?>
-											    <a class="learn-more cell nfh small-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-												    <img src="/wp-content/themes/cynnovative/assets/images/learn-more-chevron.png"/>
-												    <?php echo esc_html( $link_title ); ?>
-												</a>
-											<?php endif; ?>
+											<div class="text-wrap cell small-12 medium-6">
+												<div class="grid-x grid-padding-x">
+													<div class="cs-label-wrap cell nfh small-12">
+														<h3>Case Study</h3>
+														<div class="bar gradient-bg"></div>
+													</div>
+													
+													<?php if( get_sub_field('cs_heading_type') == 'text' ):?>
+														<h2 class="cell nfh small-12"><?php the_sub_field('cs_heading');?></h2>
+													<?php endif;?>
+		
+													<?php if( get_sub_field('cs_heading_type') == 'image' ):?>
+														<?php 
+														$image = get_sub_field('heading_image');
+														if( !empty( $image ) ): ?>
+														<div class="logo-wrap cell nfh small-12">
+														    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+														</div>
+														<?php endif; ?>
+													<?php endif;?>
+													
+													<p class="big-copy cell nfh small-12"><?php the_sub_field('cs_copy');?></p>
+													
+													<?php 
+													$link = get_sub_field('cs_link');
+													if( $link ): 
+													    $link_url = $link['url'];
+													    $link_title = $link['title'];
+													    $link_target = $link['target'] ? $link['target'] : '_self';
+													    ?>
+													    <a class="learn-more cell nfh small-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+														    <img src="/wp-content/themes/cynnovative/assets/images/learn-more-chevron.png"/>
+														    <?php echo esc_html( $link_title ); ?>
+														</a>
+													<?php endif; ?>
+												</div>
+											</div>
+									
 										</div>
 									</div>
-							
 								</div>
-							</div>
-						</div>
-					
+							
+							<?php endwhile;?>
+						<?php endif;?>
+					<?php endwhile;?>					
 				<?php endif;?>
+									
+
+					
 				</section>
 				
 				<?php if($gcta_heading = get_field('gcta_heading')):?>

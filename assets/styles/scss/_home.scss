@@ -222,21 +222,37 @@
 	}
 	
 	.blog-slider {
-		padding-top: 9.28em;
-
-		a {
-			color: $black;
-		}
+		padding-top: 6.28em;
 		
-		h3 {
-			font-size: rem-calc(22.4);
-			line-height: 1.15;
-			margin-bottom: 0.72em;
-			
-			@include breakpoint(medium) {
-				font-size: rem-calc(36);
-			}
+		.single-blog {
 
+			a {
+				color: $black;
+				
+				.title-wrap {
+					display: flex;
+					align-items: flex-end;
+					margin-bottom: 1.625em;
+					
+					h3 {
+						font-size: rem-calc(22.4);
+						line-height: 1.15;
+						margin-bottom: 0;
+						
+						@include breakpoint(medium) {
+							font-size: rem-calc(36);
+						}
+			
+					}
+					
+					.date {
+						font-weight: bold;	
+					}
+				
+				}
+			
+			}
+		
 		}
 		
 		.slick-arrow {

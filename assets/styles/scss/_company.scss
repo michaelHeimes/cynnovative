@@ -6,12 +6,7 @@
 	}
 	
 	section.grid-rows {
-    	padding-bottom: 30;
-    	
-    	@include breakpoint(medium) {
-	    	padding-bottom: 5.55em;
-	    }
-	    
+			    
 	}
 	
 	footer.footer {

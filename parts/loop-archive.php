@@ -20,7 +20,7 @@
 			
 				<header class="article-header">
 					<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-					<div class="date"><?php $post_date = get_the_date( 'F s, Y' ); echo $post_date?></div>
+					<div class="date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date?></div>
 					<div class="cats">
 						<?php 
 echo get_the_category_list(', ');

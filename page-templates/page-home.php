@@ -116,7 +116,7 @@ get_header(); ?>
 				$featured_posts = get_field('bs_blogs');
 				if( $featured_posts ): ?>
 				<section class="grid-container blog-slider-wrap">
-				    <div class="blog-slider">
+				    <div class="blog-slider" data-equalizer data-equalize-on="medium">
 					    
 					<?php 
 						$args = array(  
@@ -137,8 +137,14 @@ get_header(); ?>
 					        	<div class="grid-container">
 									<div class="grid-x grid-padding-x">
 					            
-					            
-										<h3 class="cell small-12"><?php the_title(); ?></h3>
+										<div class="title-wrap cell small-12" data-equalizer-watch>
+											<div class="grid-x grid-padding-x">
+												<h3 class="cell small-12"><?php the_title(); ?></h3>
+												<div class="date cell small-12"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date?></div>
+											</div>
+										</div>
+										
+
 										
 										<div class="thumb-wrap cell small-12">
 											<?php the_post_thumbnail( 'full' );?>
