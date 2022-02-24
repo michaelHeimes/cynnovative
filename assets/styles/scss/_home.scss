@@ -29,14 +29,86 @@
 	}
 		
 	.pss-slides {
-		height: 100vh;
+		position: relative;
+		
+		@include breakpoint(medium) {
+			height: 100vh;
+		}
+		
+		.slick-list {
+			overflow: visible;
+		}
+		
+		button {
+			cursor: pointer;
+		}
+				
+		.slider-heading-wrap {
+			position: absolute;
+			transform: translateX(1.875rem);
+		}
+		
+		.ssr-wrap {
+			@include breakpoint(small down) {
+				position: relative;
+				height: 250px;
+				height: 60vw;
+			}
+		}
+				
+		.split-slider-right {
+			margin: 0;
+
+			@include breakpoint(small down) {
+				margin-top: 2rem;
+			}
+			
+			.grid-container {
+				width: 100%;
+			}
+			.single-slide {
+				width: 100%;
+				overflow: visible;
+/*
+				width: 50vw !important;
+				width: 100%;
+*/
+			}
+		}
+
+		
+			.inner {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: auto;
+				right: 0;
+				width: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+				
+				@include breakpoint(medium) {
+					width: 50vw;
+				}
+				
+				@include breakpoint(max) {
+					width: 804px;
+				}
+				
+			}
+		
+		.split-slider-right {
+			@include breakpoint(medium) {
+				position: absolute;
+				width: 50vw;
+			}
+		}
 		
 		.grid-container {
-			position: relative;
 			height: 100%;
 
 			.grid-x {
-				position: relative;
 				height: 100%;
 			
 				h2 {
@@ -56,13 +128,17 @@
 					}
 					
 				}
+				
+				.slick-list,
+				.slick-track {
+					height: 100%;
+				}
 			
 				.single-slide {
-					height: 100vh;
 					max-height: 100%;
-					overflow: hidden;
 					
 					@include breakpoint(medium) {
+						height: 100vh;
 						overflow: visible;
 					}
 					
@@ -100,6 +176,7 @@
 						transition: all 0.4s ease 0.35s;
 					}
 				
+/*
 				&:not(:nth-of-type(1)) {
 					position: absolute;
 					top: 0;
@@ -143,6 +220,7 @@
 					}
 	
 				}
+*/
 					
 					.grid-x {
 						height: 100%;
@@ -164,6 +242,7 @@
 					}
 				
 					.text-wrap {
+						width: 100%;
 						padding-top: 10em;
 						
 						@include breakpoint(medium) {
@@ -172,31 +251,7 @@
 						
 					}
 				
-					.img-wrap {
-						position: relative;
-						
-						.inner {
-							position: absolute;
-							top: 0;
-							bottom: 0;
-							left: 0;
-							right: 0;
-							width: 100%;
-							background-repeat: no-repeat;
-							background-size: cover;
-							background-position: center center;
-							
-							@include breakpoint(medium) {
-								width: 50vw;
-							}
-							
-							@include breakpoint(max) {
-								width: 804px;
-							}
-							
-						}
-						
-					}
+
 					
 				}
 		

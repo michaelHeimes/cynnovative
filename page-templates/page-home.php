@@ -59,55 +59,82 @@ get_header(); ?>
 				<section class="pss-slides">
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
-					
-							<h2 class="cell small-12 medium-6"><?php the_field('pss_module_heading');?></h2>
 							
+							<div class="slider-heading-wrap cell small-12 medium-6">
+								<h2><?php the_field('pss_module_heading');?></h2>
+							</div>
+
+							<div class="split-slider split-slider-left cell small-12 medium-6">
 							<?php while ( have_rows('pss_slides') ) : the_row();?>
-							
 								<?php if( have_rows('single_slide') ):?>
 									<?php while ( have_rows('single_slide') ) : the_row();?>
 									
-								<div class="single-slide cell small-12">
-									<div class="grid-container">
-									<div class="grid-x grid-padding-x align-middle">
-									
-										<div class="text-wrap cell small-12 medium-6">	
-											<h3><img src="/wp-content/themes/cynnovative/assets/images/chevron-right.svg"/><?php the_sub_field('heading');?></h3>
-											<p class="big-copy"><?php the_sub_field('copy');?></p>
-										</div>
-			
-										<?php
-											$imgID = get_sub_field('image');
-											$imgSize = "full";
-											$imgArr = wp_get_attachment_image_src( $imgID, $imgSize );
+									<div class="single-slide cell small-12">
+										<div class="grid-container">
+										<div class="grid-x grid-padding-x align-middle">
 										
-										?>
-						
-										<div class="img-wrap cell small-12 medium-6">
-											<div class="inner" style="background-image: url(<?php echo $imgArr[0]; ?> );"></div>
+											<div class="text-wrap cell small-12 medium-6">	
+												<h3><img src="/wp-content/themes/cynnovative/assets/images/chevron-right.svg"/><?php the_sub_field('heading');?></h3>
+												<p class="big-copy"><?php the_sub_field('copy');?></p>
+												<div class="grid-x grid-padding-x align-middle">
+													<div class="cell shrink">
+														<button class="slick-prev"><img src="/wp-content/themes/cynnovative/assets/images/slide-prev.png"/></button>
+													</div>
+													<div class="cell shrink">
+														<button class="slick-next"><img src="/wp-content/themes/cynnovative/assets/images/slide-next.png"/></button>
+													</div>
+												</div>
+											</div>
 
 										</div>
-									
+										</div>
 									</div>
-									</div>
-								</div>
 										
 									<?php endwhile;?>
 								<?php endif;?>
-						
 							<?php endwhile;?>
-							
+							</div>
+
+							<div class="ssr-wrap cell small-12 medium-6">
+								<div class="inner">
+									<div class="split-slider split-slider-right grid-x grid-padding-x">
+										<?php while ( have_rows('pss_slides') ) : the_row();?>
+											<?php if( have_rows('single_slide') ):?>
+												<?php while ( have_rows('single_slide') ) : the_row();?>
+												
+													<div class="single-slide cell small-12">
+														<div class="grid-container">
+															<div class="grid-x grid-padding-x align-middle">
+																											<?php
+																	$imgID = get_sub_field('image');
+																	$imgSize = "full";
+																	$imgArr = wp_get_attachment_image_src( $imgID, $imgSize );
+																
+																?>
+																<div class="img-wrap cell small-12 medium-6">
+																	<div class="inner" style="background-image: url(<?php echo $imgArr[0]; ?> );"></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+												<?php endwhile;?>
+											<?php endif;?>
+										<?php endwhile;?>
+									</div>
+							</div>
+							</div>
 						</div>
 						
 					<div class="chev-down-wrap cell small-12 text-center">
-						<img src="/wp-content/themes/cynnovative/assets/images/chevron-down.svg"/>
+						<a href="#next"><img src="/wp-content/themes/cynnovative/assets/images/chevron-down.svg"/></a>
 					</div>
 						
 					</div>
 										
 				</section>
 				<?php endif;?>
-				
+					<div id="next"></div>
 				<?php if($gcta_heading = get_field('gcta_heading')):?>
 					<?php get_template_part('partials/partial', 'gradient-cta');?>
 				<?php endif;?>
@@ -158,7 +185,7 @@ get_header(); ?>
 					    
 					<?php endwhile;
 					wp_reset_postdata(); ?>
-
+				    </div>
 				</section>
 				<?php endif; ?>
 			    					

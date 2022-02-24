@@ -59,7 +59,6 @@
 						</div>
 					</div>
 				
-					</div>
 				</footer> <!-- end .footer -->
 			
 			</div>  <!-- end .off-canvas-content -->

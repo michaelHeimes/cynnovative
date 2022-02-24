@@ -1,4 +1,4 @@
-(function($) {
+jQuery( document ).ready(function($) {
 		
 // 	Home Typing Banner
 	if($('.typing-title').length ) {
@@ -73,111 +73,64 @@
 	
 	if($('.pss-slides').length ) {
 		
-		var controller = new ScrollMagic.Controller(); 
-		
-		var $vpHeight = window.innerHeight; 
-		var $slideCount = $('.pss-slides .single-slide').length;
+		 const splitSliderLeft = {
+		   slidesToShow: 1,
+		   slidesToScroll: 1,
+		   arrows: false,
+		   //autoplay: true,
+		   autoplaySpeed: 5000,
+		   asNavFor: '.split-slider',
+		   dots: true,
+		   fade: true,
+		   infinite: true,
+		   fade: true,
+		   rows: 0,
+		   dots: false,
+		   pauseOnHover: false
+/*
+		   		nextArrow: '<button class="slick-next"><img src="/wp-content/themes/cynnovative/assets/images/slide-next.png"/></button>',
+		prevArrow: '<button class="slick-prev"><img src="/wp-content/themes/cynnovative/assets/images/slide-prev.png"/></button>',
+*/
+		 };
+		 const splitSliderRight = {
+		   slidesToShow: 1,
+		   arrows: false,
+		   centerMode: true,
+		   //autoplay: true,
+		   autoplaySpeed: 7000,
+		   slidesToScroll: 1,
+		   asNavFor: '.split-slider',
+		   speed: 500,
+		   focusOnSelect:true,
+		   infinite: true,
+		   fade: true,
+		   rows: 0,
+		   dots: false,
+		   pauseOnHover: false
+		 };
 
-		function setPSSHeight() {
-			
-		if (window.innerHeight > 1100) {
-			$('.pss-slides').css('height', '1100px');
-		
-		} else {
-			$('.pss-slides').css('height', '100vh');
-		}	
-		
-		};
-		setPSSHeight();
-		
-		$(window).resize(function() {
-			setPSSHeight();
-		});
+		$('.split-slider-left').slick(splitSliderLeft);
+		 
+		$('.split-slider-right').slick(splitSliderRight);
 
+		$('.slick-prev').click(function(){ 
+			$('.split-slider-left').slick('slickPrev');
+		} );
+		 
+		$('.slick-next').click(function(){ 
+			$('.split-slider-left').slick('slickNext');
+		} );
 		
-		var pinDuration = 400 * $slideCount;
-								
-		var scene = new ScrollMagic.Scene({
-	        triggerElement: ".pss-slides",
-	        triggerHook: "onLeave",
-	        offset: 0,
-	        duration: pinDuration
-		})
-		.setPin('.pss-slides')
-// 		.setClassToggle(this, "active")
-		.addTo(controller);
-		
-		$('.pss-slides .single-slide').first().addClass('active');
-		
-		$('.pss-slides .single-slide').first().each(function(index, element) {
-			
-			$heading = $(this).find('h3');
-			$text = $(this).find('p');
-			
-			var $slideNumber = $('.pss-slides .single-slide').index(this);
-			
-			var tweenOffset = 400 * $slideNumber;
-			
-// 			console.log(tweenOffset);
-		
-			new ScrollMagic.Scene({
-				triggerElement: ".pss-slides",
-		        triggerHook: "onLeave",
-		        offset: 400,
-		        duration: pinDuration * 2
-			})
-			.setClassToggle(this, "hide")
-			.addTo(controller);
-					
-		});
-		
-		
-		$('.pss-slides .single-slide:not(:first-child):not(:last-child)').each(function(index, element) {
-			
-			$heading = $(this).find('h3');
-			$text = $(this).find('p');
-			
-			var $slideNumber = $('.pss-slides .single-slide').index(this);
-			
-			var tweenOffset = 400 * $slideNumber;
-			
-// 			console.log(tweenOffset);
-		
-			new ScrollMagic.Scene({
-				triggerElement: ".pss-slides",
-		        triggerHook: "onLeave",
-		        offset: tweenOffset,
-		        duration: 400
-			})
-			.setClassToggle(this, "active")
-			.addTo(controller);
-					
-		});
-		
-
-		$('.pss-slides .single-slide:last-child').each(function(index, element) {
-			
-			$heading = $(this).find('h3');
-			$text = $(this).find('p');
-			
-			var $slideNumber = $('.pss-slides .single-slide').index(this);
-			
-			var tweenOffset = 400 * $slideNumber;
-					
-			new ScrollMagic.Scene({
-				triggerElement: ".pss-slides",
-		        triggerHook: "onLeave",
-		        offset: tweenOffset
-			})
-			.setClassToggle(this, "active")
-			.addTo(controller);
-					
-		});
-		
-		
-		$(document).on('click', '.chev-down-wrap img', function(e){
-			$('html, body').animate({scrollTop: '+=400px'}, 400);
-		});
+/*
+	$('.pss-slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		nextArrow: '<button class="slick-next"><img src="/wp-content/themes/cynnovative/assets/images/slide-next.png"/></button>',
+		prevArrow: '<button class="slick-prev"><img src="/wp-content/themes/cynnovative/assets/images/slide-prev.png"/></button>',
+	});
+*/
 		
 	
 	}
@@ -251,6 +204,6 @@
 	
 // 	$('.contractor-slider-wrap .contractor-slidernav .nav .nav-link-wrap:first-child').addClass('clicked');
 	
-})( jQuery );
+});
 
 
