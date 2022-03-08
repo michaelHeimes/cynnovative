@@ -85,8 +85,8 @@ jQuery( document ).ready(function($) {
 		   infinite: true,
 		   fade: true,
 		   rows: 0,
-		   dots: false,
-		   pauseOnHover: false
+		   pauseOnHover: false,
+		   appendDots:$(this).find('.dots-container'),
 /*
 		   		nextArrow: '<button class="slick-next"><img src="/wp-content/themes/cynnovative/assets/images/slide-next.png"/></button>',
 		prevArrow: '<button class="slick-prev"><img src="/wp-content/themes/cynnovative/assets/images/slide-prev.png"/></button>',
@@ -112,26 +112,20 @@ jQuery( document ).ready(function($) {
 		$('.split-slider-left').slick(splitSliderLeft);
 		 
 		$('.split-slider-right').slick(splitSliderRight);
+		
+		$('.split-slider-left').on( 'afterChange', function( event, slick, currentSlide ) {
+			$.each(slick.$dots, (i, el) => {
+			$(el).find('li').eq(currentSlide).addClass('slick-active-dot').siblings().removeClass('slick-active-dot');
+			})
+		});
 
-		$('.slick-prev').click(function(){ 
-			$('.split-slider-left').slick('slickPrev');
-		} );
-		 
-		$('.slick-next').click(function(){ 
-			$('.split-slider-left').slick('slickNext');
-		} );
-		
-/*
-	$('.pss-slider').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: false,
-		nextArrow: '<button class="slick-next"><img src="/wp-content/themes/cynnovative/assets/images/slide-next.png"/></button>',
-		prevArrow: '<button class="slick-prev"><img src="/wp-content/themes/cynnovative/assets/images/slide-prev.png"/></button>',
-	});
-*/
-		
+		$('.split-slider-right').on( 'afterChange', function( event, slick, currentSlide ) {
+			$.each(slick.$dots, (i, el) => {
+			$(el).find('li').eq(currentSlide).addClass('slick-active-dot').siblings().removeClass('slick-active-dot');
+			})
+		});
+
+		$('.split-slider-left .single-slide:first-child ul.slick-dots li:first-child').addClass('slick-active-dot');
 	
 	}
 	

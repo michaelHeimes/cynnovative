@@ -71,22 +71,15 @@ get_header(); ?>
 									
 									<div class="single-slide cell small-12">
 										<div class="grid-container">
-										<div class="grid-x grid-padding-x align-middle">
-										
-											<div class="text-wrap cell small-12 medium-6">	
-												<h3><img src="/wp-content/themes/cynnovative/assets/images/chevron-right.svg"/><?php the_sub_field('heading');?></h3>
-												<p class="big-copy"><?php the_sub_field('copy');?></p>
-												<div class="grid-x grid-padding-x align-middle">
-													<div class="cell shrink">
-														<button class="slick-prev"><img src="/wp-content/themes/cynnovative/assets/images/slide-prev.png"/></button>
-													</div>
-													<div class="cell shrink">
-														<button class="slick-next"><img src="/wp-content/themes/cynnovative/assets/images/slide-next.png"/></button>
-													</div>
+											<div class="grid-x grid-padding-x align-middle">
+											
+												<div class="text-wrap cell small-12 medium-6">	
+													<h3><img src="/wp-content/themes/cynnovative/assets/images/chevron-right.svg"/><?php the_sub_field('heading');?></h3>
+													<p class="big-copy"><?php the_sub_field('copy');?></p>
+													
+													<div class="dots-container"></div>
 												</div>
 											</div>
-
-										</div>
 										</div>
 									</div>
 										
@@ -105,7 +98,7 @@ get_header(); ?>
 													<div class="single-slide cell small-12">
 														<div class="grid-container">
 															<div class="grid-x grid-padding-x align-middle">
-																											<?php
+																<?php
 																	$imgID = get_sub_field('image');
 																	$imgSize = "full";
 																	$imgArr = wp_get_attachment_image_src( $imgID, $imgSize );

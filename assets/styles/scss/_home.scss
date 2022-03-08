@@ -175,6 +175,62 @@
 					p {
 						transition: all 0.4s ease 0.35s;
 					}
+					
+					.dots-container {
+						ul.slick-dots {
+							margin: 0;
+							padding: 0;
+							list-style: none;
+							display: flex;
+							align-items: center;
+							button {
+								position: relative;
+								font-size: 0;
+								width: 20px;
+								height: 20px;
+								background-image: linear-gradient(-57deg,#71c48c,#55bfa1 22%,#39b9b5 51%,#24b6c1 78%,#0fb2cd);
+								border-radius: 100%;
+								margin-right: 10px;
+								
+								&:before,
+								&:after {
+									content: '';
+									position: absolute;
+									border-radius: 100%;
+									top: 50%;
+									left: 50%;
+									transform: translate(-50%, -50%);
+									transition: .3s ease;
+								}
+								
+								&:before {
+									height: 0;
+									width: 0;
+									background-color: $white;
+								}
+
+								&:after {
+									height: 0;
+									width: 0;
+									border: 1px solid $white;
+								}
+								
+							}
+							
+						li {
+							&.slick-active-dot button:before {
+								height: 9px;
+								width: 9px;
+							}
+
+							&.slick-active-dot button:after {
+								height: 14px;
+								width: 14px;
+							}
+						}
+							
+						}
+					}
 				
 /*
 				&:not(:nth-of-type(1)) {
