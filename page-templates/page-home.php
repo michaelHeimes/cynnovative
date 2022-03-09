@@ -96,7 +96,7 @@ get_header(); ?>
 												<?php while ( have_rows('single_slide') ) : the_row();?>
 												
 													<div class="single-slide cell small-12">
-														<div class="grid-container">
+														<div class="grid-container fluid">
 															<div class="grid-x grid-padding-x align-middle">
 																<?php
 																	$imgID = get_sub_field('image');
