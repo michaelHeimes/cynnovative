@@ -1,4 +1,35 @@
-.page-template-page-job-openings {
+.page-template-page-job-openings,
+.single-job {
+	
+	.single-section {
+		padding-bottom: 2em;
+		
+		@include breakpoint(medium) {
+			padding-bottom: 4em;
+		}
+		
+		h4 {
+			margin-bottom: 1.18em;
+			
+			@media screen and (min-width: 768px) {
+				br {
+					display: none;
+				}
+			}
+			
+			span {
+				
+				img {
+					width: 0.55em;
+					margin-top: -.2em;
+					margin-left: 0.1em;
+				}
+				
+				color: $primary-color;
+			}
+			
+		}
+	}					
 	
 	section.pi-copy {
 	    padding-top: 6.55em;
@@ -87,35 +118,6 @@
 						padding-bottom: 0;
 					}
 
-					.single-section {
-						padding-bottom: 2em;
-						
-						@include breakpoint(medium) {
-							padding-bottom: 4em;
-						}
-						
-						h4 {
-							margin-bottom: 1.18em;
-							
-							@media screen and (min-width: 768px) {
-								br {
-									display: none;
-								}
-							}
-							
-							span {
-								
-								img {
-									width: 0.55em;
-								    margin-top: -.2em;
-								    margin-left: 0.1em;
-								}
-								
-								color: $primary-color;
-							}
-							
-						}
-					}					
 				}
 				
 			}
@@ -123,4 +125,13 @@
 		
 	}
 	
+}
+
+.single-job {
+	.title-banner {
+		margin-bottom: 3.7rem;
+		.title {
+			color: $white;
+		}
+	}
 }
