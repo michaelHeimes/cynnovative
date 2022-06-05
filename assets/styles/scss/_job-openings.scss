@@ -39,88 +39,92 @@
 	section.jobs-wrap {
 		padding-top: 4.3em;
 		
-		ul.accordion {
-			li.single-job {
-				padding-bottom: 2.8em;
+		.single-job {
+			padding-bottom: 2.8em;
+			
+			.inner {
+				padding-right: 2.8em;
+			}
+			
+			a {
+				background: $black;
+				color: $white;
+				position: relative;
+				display: block;
+				padding: 4.75rem 1rem 2.25em;
+				border: 0 solid #f2f2f2;
+				border-bottom: 0;
+				font-size: 1.125rem;
+				line-height: 1;
 				
-				.inner {
-					padding-right: 2.8em;
+				@media screen and (max-width: 640px) {
+					padding-left: 0;
+					padding-right: 0;
 				}
 				
-				a.accordion-title {
-					background: $black;
-					color: $white;
-					position: relative;
-					
-					@media screen and (max-width: 640px) {
-						padding-left: 0;
-						padding-right: 0;
-					}
-					
-					.gradient-bg {
-						position: absolute;
-						top: 0;
-						left: 0;
-						right: 0;
-						bottom: 0;
-						opacity: 0;
-						transition: opacity 0.5s ease;
-					}
-					
-				&[aria-selected="true"] {
-					.gradient-bg {
-						opacity: 1;
-					}
-					
-					.grid-container .inner:before {
-						transform: translateY(-50%) rotate(90deg);
-					}
-					
-				}
-					
-				&:before {
-					content: '';
+				.gradient-bg {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					opacity: 0;
+					transition: opacity 0.5s ease;
 				}
 				
-					.grid-container {
-						position: relative;	
-					
-					.inner {	
-						position: relative;
-						
-					&:before {
-						position: absolute;
-						right: 0.9375rem;
-						z-index: 1;
-						content: url(/wp-content/themes/cynnovative/assets/images/chevron-right-white.png);
-						margin-top: 0;
-						top: 50%;
-						transform: translateY(-50%) rotate(0deg);
-						transition: transform 0.5s ease;
-					}
-											
-						h2,
-						h3 {
-							color: $white;
-						}
-						
-					}
-					
-					}
-
+			&[aria-selected="true"] {
+				.gradient-bg {
+					opacity: 1;
 				}
 				
-				.accordion-content {
-
-					@media screen and (max-width: 640px) {
-						padding-left: 0;
-						padding-right: 0;
-						padding-bottom: 0;
-					}
-
+				.grid-container .inner:before {
+					transform: translateY(-50%) rotate(90deg);
 				}
 				
 			}
+				
+			&:before {
+				content: '';
+			}
+			
+				.grid-container {
+					position: relative;	
+				
+				.inner {	
+					position: relative;
+					
+				&:before {
+					position: absolute;
+					right: 0.9375rem;
+					z-index: 1;
+					content: url(/wp-content/themes/cynnovative/assets/images/chevron-right-white.png);
+					margin-top: 0;
+					top: 50%;
+					transform: translateY(-50%) rotate(0deg);
+					transition: transform 0.5s ease;
+				}
+										
+					h2,
+					h3 {
+						color: $white;
+					}
+					
+				}
+				
+				}
+
+			}
+			
+			.accordion-content {
+
+				@media screen and (max-width: 640px) {
+					padding-left: 0;
+					padding-right: 0;
+					padding-bottom: 0;
+				}
+
+			}
+			
 		}
 		
 	}
