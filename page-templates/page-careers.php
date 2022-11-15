@@ -209,9 +209,57 @@ get_header(); ?>
 				
 				
 				<section class="team">
+					<?php if( $team_hashtag = get_field('team_hashtag')):?>
 					<div class="grid-container">
 						<div class="grid-x grid-padding-x">
-							<h2 class="big-h2 cell small-12 text-center"><?php the_field('team_hashtag');?></h2>
+							<h2 class="big-h2 cell small-12 text-center"><?php echo $team_hashtag;?></h2>
+						</div>
+					</div>
+					<?php endif;?>
+
+					<div class="grid-container blog-slider-wrap">
+						<div class="blog-slider">
+							
+						<?php 
+							$args = array(  
+								'post_type' => 'post',
+								'post_status' => 'publish',
+								'posts_per_page' => -1,
+								'order' => 'DESC'
+							);
+							
+							$loop = new WP_Query( $args ); 
+							while ( $loop->have_posts() ) : $loop->the_post(); 
+							
+						?>
+					 
+							<div class="single-blog text-center">
+								
+								<a href="<?php the_permalink(); ?>">
+									<div class="grid-container">
+										<div class="grid-x grid-padding-x">
+									
+											<div class="title-wrap cell small-12">
+												<div class="grid-x grid-padding-x">
+													<h3 class="cell small-12"><?php the_title(); ?></h3>
+													<div class="date cell small-12"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date?></div>
+												</div>
+											</div>
+											
+					
+											
+											<div class="thumb-wrap cell small-12">
+												<?php the_post_thumbnail( 'full' );?>
+											</div>
+									
+										</div>
+									</div>
+								</a>
+								
+							</div>
+							
+						<?php endwhile;
+						wp_reset_postdata(); ?>
 						</div>
 					</div>
 							

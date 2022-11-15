@@ -132,11 +132,9 @@ get_header(); ?>
 					<?php get_template_part('partials/partial', 'gradient-cta');?>
 				<?php endif;?>
 				
-				<?php
-				$featured_posts = get_field('bs_blogs');
-				if( $featured_posts ): ?>
+				
 				<section class="grid-container blog-slider-wrap">
-				    <div class="blog-slider" data-equalizer data-equalize-on="medium">
+				    <div class="blog-slider">
 					    
 					<?php 
 						$args = array(  
@@ -157,7 +155,7 @@ get_header(); ?>
 					        	<div class="grid-container">
 									<div class="grid-x grid-padding-x">
 					            
-										<div class="title-wrap cell small-12" data-equalizer-watch>
+										<div class="title-wrap cell small-12">
 											<div class="grid-x grid-padding-x">
 												<h3 class="cell small-12"><?php the_title(); ?></h3>
 												<div class="date cell small-12"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date?></div>
@@ -180,7 +178,6 @@ get_header(); ?>
 					wp_reset_postdata(); ?>
 				    </div>
 				</section>
-				<?php endif; ?>
 			    					
 			</main> <!-- end #main -->
 		    
